@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Personagens/Personagem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Personagens/inimigo.gd" type="Script" id=2]
+
+[node name="Inimigo" instance=ExtResource( 1 )]
+collision_layer = 2
+script = ExtResource( 2 )
+velocidade_maxima = 80.0
+aceleracao = 5.0
+dist_min_fugir = 200.0
+
+[node name="Sprite" parent="." index="0"]
+modulate = Color( 1, 0, 0, 1 )
+
+[node name="TimerAtualizarMelhorAlvo" type="Timer" parent="." index="2"]
+autostart = true
+[connection signal="timeout" from="TimerAtualizarMelhorAlvo" to="." method="_atualizar_alvo"]

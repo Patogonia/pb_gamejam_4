@@ -46,6 +46,12 @@ ativar_desativar_lanterna={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Jogador"
+2d_physics/layer_2="Inimigo"
+2d_physics/layer_3="Obstaculo"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
