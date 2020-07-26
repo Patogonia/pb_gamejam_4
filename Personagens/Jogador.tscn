@@ -5,7 +5,7 @@
 [ext_resource path="res://Personagens/guardinha.png" type="Texture" id=3]
 [ext_resource path="res://Personagens/Lanterna/Lanterna.tscn" type="PackedScene" id=4]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 3 )
 region = Rect2( 16, 0, 16, 20 )
 
@@ -17,9 +17,9 @@ region = Rect2( 0, 0, 16, 20 )
 atlas = ExtResource( 3 )
 region = Rect2( 32, 0, 16, 20 )
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ SubResource( 1 ) ],
+"frames": [ SubResource( 4 ) ],
 "loop": true,
 "name": "parado",
 "speed": 5.0
@@ -38,7 +38,7 @@ aceleracao = 5.0
 
 [node name="Sprite" parent="." index="0"]
 scale = Vector2( 1, 1 )
-frames = SubResource( 4 )
+frames = SubResource( 5 )
 animation = "parado"
 
 [node name="RaycastInimigo" type="RayCast2D" parent="." index="2"]
