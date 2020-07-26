@@ -12,8 +12,8 @@ scale = Vector2( 0.435, 0.4 )
 texture = ExtResource( 2 )
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 67.861, 0 )
-enabled = false
+position = Vector2( 1, 0 )
 texture = ExtResource( 1 )
+offset = Vector2( 67, 0 )
 texture_scale = 0.13
 shadow_enabled = true
