@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Personagens/Lanterna/LuzDaLanternaTemp2.png" type="Texture" id=1]
+[ext_resource path="res://Personagens/Lanterna/Lanterna.png" type="Texture" id=2]
+[ext_resource path="res://Personagens/Lanterna/Lanterna.gd" type="Script" id=3]
+
+[node name="Lanterna" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.435, 0.4 )
+texture = ExtResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 67.861, 0 )
+enabled = false
+texture = ExtResource( 1 )
+texture_scale = 0.13
+shadow_enabled = true
