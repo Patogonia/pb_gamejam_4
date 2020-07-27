@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/modelo_statico.png-ca4227a2169f68552055c1b901acabb4.stex"
+path="res://.import/guardinha.png-1513af24c33bf54f3843cb0c94defc45.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Personagens/modelo_statico.png"
-dest_files=[ "res://.import/modelo_statico.png-ca4227a2169f68552055c1b901acabb4.stex" ]
+source_file="res://Personagens/guardinha.png"
+dest_files=[ "res://.import/guardinha.png-1513af24c33bf54f3843cb0c94defc45.stex" ]
 
 [params]
 

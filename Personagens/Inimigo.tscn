@@ -1,7 +1,33 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Personagens/Personagem.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Personagens/inimigo.gd" type="Script" id=2]
+[ext_resource path="res://Personagens/inimigo.png" type="Texture" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 3 )
+region = Rect2( 20, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 40, 0, 20, 20 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "parado",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "andando",
+"speed": 5.0
+} ]
 
 [node name="Inimigo" instance=ExtResource( 1 )]
 collision_layer = 2
@@ -12,6 +38,10 @@ dist_min_fugir = 200.0
 
 [node name="Sprite" parent="." index="0"]
 modulate = Color( 1, 0, 0, 1 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+animation = "parado"
+playing = true
 
 [node name="TimerAtualizarMelhorAlvo" type="Timer" parent="." index="2"]
 autostart = true

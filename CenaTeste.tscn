@@ -20,6 +20,7 @@ caminho_inimigo = NodePath("../Inimigo")
 
 [node name="Inimigo" parent="." instance=ExtResource( 2 )]
 position = Vector2( -519.678, 173.01 )
+velocidade_maxima = 70.0
 caminho_jogador = NodePath("../Jogador")
 caminho_alvos_inimigo = NodePath("../AlvosInimigo")
 
