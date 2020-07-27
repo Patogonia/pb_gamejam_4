@@ -8,7 +8,6 @@ onready var _sprite: AnimatedSprite = $Sprite
 var _direcao: Vector2 = Vector2.ZERO
 var _velocidade: Vector2
 
-var lado = "direita"
 
 func _physics_process(delta: float) -> void:
 	# Aplicar velocidade
