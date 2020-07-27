@@ -7,7 +7,6 @@
 extents = Vector2( 4.05398, 4.46932 )
 
 [node name="RaioTaser" type="Area2D"]
-collision_layer = 2
 collision_mask = 6
 script = ExtResource( 2 )
 

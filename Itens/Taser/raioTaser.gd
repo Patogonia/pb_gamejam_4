@@ -11,7 +11,7 @@ func _on_Timer_timeout():
 		self.queue_free()
 	
 	var novo_sprite = $Sprite.duplicate()
-	self.add_child(novo_sprite)
+	call_deferred("add_child", novo_sprite)
 	novo_sprite.position = Vector2(iteracoes * 8, 0)
 	randomize()
 	novo_sprite.position.y = rand_range(-1, 1)
@@ -19,6 +19,7 @@ func _on_Timer_timeout():
 	$CollisionShape2D.position.x += 4
 
 
-func _on_RaioTaser_collision(body):
-#	if body.has_method("_fim_stun"):
-	print("collision")
+func _on_RaioTaser_collision(body: Node):
+	# Dois testes so pra ter certeza
+	if body.is_in_group("inimigo") and body.has_method("stunar"):
+		body.stunar(tempo_de_stun)

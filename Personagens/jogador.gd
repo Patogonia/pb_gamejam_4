@@ -3,6 +3,7 @@ extends "res://Personagens/personagem.gd"
 onready var raycast_inimigo: RayCast2D = $RaycastInimigo
 
 export(NodePath) var caminho_inimigo
+export(float) var zoom_camera = .25
 
 var _inimigo: Node2D
 
@@ -13,6 +14,7 @@ var posicao_armadilha = Vector2(0, 0)
 func _ready() -> void:
 	_inimigo = get_node(caminho_inimigo)
 	velocidade_maxima_original = velocidade_maxima
+	$Camera2D.zoom = Vector2(zoom_camera, zoom_camera)
 
 
 func _physics_process(_d: float) -> void:

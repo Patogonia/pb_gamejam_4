@@ -25,8 +25,4 @@ shape = SubResource( 1 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 2 )
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-cast_to = Vector2( 0, 40 )
-collision_mask = 6
 [connection signal="body_entered" from="." to="." method="_on_ArmadilhaAtiva_body_entered"]
