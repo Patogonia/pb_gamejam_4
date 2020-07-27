@@ -3,7 +3,7 @@ extends KinematicBody2D
 export(float) var velocidade_maxima
 export(float) var aceleracao 
 
-onready var _sprite: Sprite = $Sprite
+onready var _sprite: AnimatedSprite = $Sprite
 
 var _direcao: Vector2 = Vector2.ZERO
 var _velocidade: Vector2
@@ -17,10 +17,11 @@ func _physics_process(delta: float) -> void:
 	_velocidade = move_and_slide(vel_interp, Vector2.UP)
 	
 	_virar_personagem(_direcao.x)
+	_sprite.play("andando" if _direcao.x != 0 or _direcao.y != 0 else "parado")
 
 
-func _virar_personagem(direcao: float):
+func _virar_personagem(direcao: float) -> void:
 	if direcao > 0:
-		$Sprite.flip_h = false
+		_sprite.flip_h = false
 	elif direcao < 0:
-		$Sprite.flip_h = true
+		_sprite.flip_h = true
