@@ -45,11 +45,24 @@ func _set_ligada(new: bool) -> void:
 	$Light2D.enabled = new
 
 
+# Faz a luz piscar
 func _on_LanternaPiscaTimer_timeout() -> void:
 	if ligada:
+		# Caso esteja apagada ela acende e liga o timer pra apagar dnv
 		if apagada:
 			$Light2D.enabled = true
 			apagada = false
 			$LanternaPiscaTimer.start(rand_range(1, 4))
+		# Desliga o piscando fazendo com que ela apague dnv
 		else:
 			piscando = false
+
+
+# Recarrega td a bateria e reseta tds as variaveis da lanterna piscando
+func _recarregar():
+	bateria = max_bateria
+	$LanternaPiscaTimer.stop()
+	piscando = false
+	apagada = false
+	$Light2D.enabled = ligada
+	$Light2D.energy = 1
