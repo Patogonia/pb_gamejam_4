@@ -1,0 +1,231 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Menu/ButtonStyle.png" type="Texture" id=1]
+[ext_resource path="res://Menu/selecaoDeLevel.gd" type="Script" id=2]
+[ext_resource path="res://minimapLevel1.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 1024, 1024 )
+margin_left = 40.0
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 1024, 1024 )
+margin_left = 40.0
+modulate_color = Color( 0.494118, 0.494118, 0.494118, 1 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 1024, 1024 )
+margin_left = 40.0
+modulate_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.0196078, 0.0196078, 0.0196078, 1 )
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.160784, 0.160784, 0.160784, 1 )
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.0196078, 0.0196078, 0.0196078, 1 )
+
+[node name="SelecaoDeLevel" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.109804, 0.109804, 0.109804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="MenuButton" type="Button" parent="."]
+light_mask = 2
+anchor_left = 0.036
+anchor_top = 0.852
+anchor_right = 0.25
+anchor_bottom = 0.938
+margin_left = 0.162544
+margin_top = -0.212128
+margin_right = 0.0265198
+margin_bottom = 0.187866
+focus_mode = 0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+enabled_focus_mode = 0
+text = "MAIN MENU"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.363
+anchor_top = 0.038
+anchor_right = 0.638
+anchor_bottom = 0.12
+margin_left = 0.288025
+margin_top = 0.200001
+margin_right = -0.312012
+text = "LEVELS"
+align = 1
+valign = 1
+
+[node name="Level1" type="Control" parent="."]
+anchor_left = 0.267
+anchor_top = 0.158
+anchor_right = 0.466
+anchor_bottom = 0.743
+margin_left = -0.40802
+margin_top = 0.199997
+margin_right = -0.184021
+margin_bottom = 0.199982
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Level1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1.52588e-05
+margin_bottom = 3.05176e-05
+focus_mode = 0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelLabel" type="Label" parent="Level1"]
+anchor_top = 0.023
+anchor_right = 1.0
+anchor_bottom = 0.114
+margin_top = -0.0730009
+margin_right = 1.52588e-05
+margin_bottom = -0.0140038
+text = "Level 1:
+OUTSIDE"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Level1"]
+position = Vector2( 100, 172.793 )
+scale = Vector2( 1.42523, 1.42523 )
+texture = ExtResource( 3 )
+
+[node name="BestTimeLabel" type="Label" parent="Level1"]
+anchor_top = 0.875
+anchor_right = 1.0
+anchor_bottom = 0.974
+margin_top = -0.125031
+margin_right = 1.52588e-05
+margin_bottom = 0.125977
+text = "Best Time: 00:00:00"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level2" type="Control" parent="."]
+anchor_left = 0.534
+anchor_top = 0.158
+anchor_right = 0.733
+anchor_bottom = 0.743
+margin_left = 0.18396
+margin_top = 0.200005
+margin_right = 0.407959
+margin_bottom = 0.199982
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Level2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1.52588e-05
+margin_bottom = 3.05176e-05
+focus_mode = 0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelLabel" type="Label" parent="Level2"]
+anchor_top = 0.023
+anchor_right = 1.0
+anchor_bottom = 0.114
+margin_top = -0.0730009
+margin_bottom = -1.014
+text = "Level 2:
+THE BUILDING"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Level2"]
+position = Vector2( 100, 172.793 )
+scale = Vector2( 1.42523, 1.42523 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="BestTimeLabel" type="Label" parent="Level2"]
+anchor_top = 0.875
+anchor_right = 1.0
+anchor_bottom = 0.974
+margin_top = -0.125031
+margin_right = 1.52588e-05
+margin_bottom = 0.125977
+text = "Best Time: 00:00:00"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Trasition" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Trasition"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_MenuButton_pressed"]
+[connection signal="pressed" from="Level1/Button" to="." method="_on_Button_Level1_pressed"]
+[connection signal="pressed" from="Level2/Button" to="." method="_on_Button_Level2_pressed"]
