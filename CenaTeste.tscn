@@ -1,9 +1,10 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://MesaRecarregador/MesaRecarregador.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Personagens/Jogador.tscn" type="PackedScene" id=3]
 [ext_resource path="res://alvos_inimigo.gd" type="Script" id=4]
+[ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=5]
 [ext_resource path="res://tilemap.png" type="Texture" id=6]
 
 [sub_resource type="OccluderPolygon2D" id=1]
@@ -495,3 +496,5 @@ caminho_jogador = NodePath("../Jogador")
 
 [node name="MesaRecarregador" parent="." instance=ExtResource( 2 )]
 position = Vector2( 32, 0 )
+
+[node name="HUD" parent="." instance=ExtResource( 5 )]
