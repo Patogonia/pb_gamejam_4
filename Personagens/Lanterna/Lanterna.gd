@@ -1,6 +1,6 @@
 extends Node2D
 
-export(float, 0, 100) var bateria = 60
+export(float) var bateria = 60 setget _set_bateria
 # Settar a max_bateria como a bateria pro player ja começar com a max bateria
 # e pra dar de settar um outro valor mais rapido pelo editor
 var max_bateria: float = bateria
@@ -19,11 +19,10 @@ func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
 	# Se estiver ligada gasta bateria
 	if ligada:
-		bateria -= delta
+		_set_bateria(bateria - delta)
+		
 		# Força da luz da lanterna diminui junto com a bateria
-		if $Light2D.energy > 0.5:
-			$Light2D.energy = (bateria / (max_bateria / 100)) / 100
-		elif bateria < max_bateria * 0.4 and not piscando:
+		if bateria < max_bateria * 0.4 and not piscando:
 			piscando = true
 			randomize()
 			$LanternaPiscaTimer.start(rand_range(0.05, 0.3))
@@ -31,7 +30,6 @@ func _process(delta: float) -> void:
 			apagada = true
 		# Caso a bateria acabe a lanterna desliga
 		if bateria <= 0:
-			bateria = 0
 			_set_ligada(false)
 
 
@@ -65,4 +63,15 @@ func _recarregar():
 	piscando = false
 	apagada = false
 	$Light2D.enabled = ligada
-	$Light2D.energy = 1
+
+
+# Setter da bateria pra evitar problemas mechendo com o power bank
+func _set_bateria(new_value) -> void:
+	if new_value > max_bateria:
+		bateria = max_bateria
+	elif new_value < 0:
+		bateria = 0
+	else:
+		bateria = new_value
+	
+	$Light2D.energy = clamp((bateria / (max_bateria / 100)) / 100, .5, 1)
