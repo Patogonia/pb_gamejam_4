@@ -41,6 +41,7 @@ func _set_ligada(new: bool) -> void:
 	ligada = new
 	# Caso novo valor for true fica visivel, caso for false não fica visivel
 	$Light2D.enabled = new
+	$ReveladorInimigo.enabled = new
 
 
 # Faz a luz piscar
@@ -58,11 +59,13 @@ func _on_LanternaPiscaTimer_timeout() -> void:
 
 # Recarrega td a bateria e reseta tds as variaveis da lanterna piscando
 func _recarregar():
-	bateria = max_bateria
-	$LanternaPiscaTimer.stop()
 	piscando = false
 	apagada = false
-	$Light2D.enabled = ligada
+	
+	_set_bateria(max_bateria)
+	_set_ligada(ligada)
+	
+	$LanternaPiscaTimer.stop()
 
 
 # Setter da bateria pra evitar problemas mechendo com o power bank
