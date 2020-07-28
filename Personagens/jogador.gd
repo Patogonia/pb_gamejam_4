@@ -6,8 +6,12 @@ export(NodePath) var caminho_inimigo
 
 var _inimigo: Node2D
 
+var velocidade_maxima_original
+
+
 func _ready() -> void:
 	_inimigo = get_node(caminho_inimigo)
+	velocidade_maxima_original = velocidade_maxima
 
 
 func _physics_process(_d: float) -> void:
@@ -21,3 +25,7 @@ func _physics_process(_d: float) -> void:
 		var colisor = raycast_inimigo.get_collider()
 		if colisor:
 			colisor.queue_free()
+
+
+func _fim_buff_cafe():
+	self.velocidade_maxima = velocidade_maxima_original

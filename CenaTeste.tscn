@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://MesaRecarregador/MesaRecarregador.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://alvos_inimigo.gd" type="Script" id=4]
 [ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=5]
 [ext_resource path="res://tilemap.png" type="Texture" id=6]
+[ext_resource path="res://Itens/Cafe/MesaCafe.tscn" type="PackedScene" id=7]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 0, 16, 0, 0, 16, 0, 16, 8, 8, 8, 8, 16 )
@@ -496,5 +497,10 @@ caminho_jogador = NodePath("../Jogador")
 
 [node name="MesaRecarregador" parent="." instance=ExtResource( 2 )]
 position = Vector2( 32, 0 )
+
+[node name="MesaCafe" parent="." instance=ExtResource( 7 )]
+position = Vector2( -64, 0 )
+item_to_instance = "res://Itens/Cafe/Cafe.tscn"
+hud_path = NodePath("../HUD")
 
 [node name="HUD" parent="." instance=ExtResource( 5 )]

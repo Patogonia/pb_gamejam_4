@@ -10,29 +10,29 @@ extents = Vector2( 8, 8 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16, 16 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 3 )
 region = Rect2( 32, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 3 )
 region = Rect2( 64, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 3 )
 region = Rect2( 96, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 3 )
 region = Rect2( 128, 0, 32, 32 )
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=8]
 animations = [ {
-"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
 "loop": false,
 "name": "default",
 "speed": 9.0
@@ -58,9 +58,10 @@ collision_layer = 0
 shape = SubResource( 2 )
 
 [node name="BotaoSprite" type="AnimatedSprite" parent="."]
+visible = false
 position = Vector2( 0, -13.3249 )
 scale = Vector2( 0.432238, 0.426519 )
-frames = SubResource( 3 )
+frames = SubResource( 8 )
 
 [node name="Label" type="Label" parent="BotaoSprite"]
 anchor_left = 0.281
