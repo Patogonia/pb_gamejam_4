@@ -12,7 +12,7 @@ func _ready():
 	_jogador = get_parent().get_node("../Jogador")
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# Se clicar o botao e o item existir ele usa o item
 	if Input.is_action_just_pressed("item1") and itens[0] != null:
 		itens[0]._use(_jogador)
@@ -28,7 +28,7 @@ func _espaco_novo_item():
 	elif itens[1] == null:
 		return 1
 	else:
-		return false
+		return null
 
 
 # Tira o item do array e mata ele
