@@ -8,6 +8,10 @@ export(Color) var cor_ultimo_pos
 
 var caminho: PoolVector2Array setget _definir_caminho
 
+func _ready() -> void:
+	Globais.desenhador_caminho = self
+
+
 func _definir_caminho(valor: PoolVector2Array) -> void:
 	caminho = valor
 	update()

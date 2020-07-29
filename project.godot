@@ -18,6 +18,10 @@ _global_script_class_icons={
 config/name="New Game Project"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globais="*res://globais.gd"
+
 [input]
 
 andar_pra_esquerda={

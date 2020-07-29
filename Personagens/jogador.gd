@@ -2,17 +2,14 @@ extends "res://Personagens/personagem.gd"
 
 onready var raycast_inimigo: RayCast2D = $RaycastInimigo
 
-export(NodePath) var caminho_inimigo
 export(float) var zoom_camera = .25
-
-var _inimigo: Node2D
 
 var velocidade_maxima_original
 var posicao_armadilha = Vector2(0, 0)
 
 
 func _ready() -> void:
-	_inimigo = get_node(caminho_inimigo)
+	Globais.jogador = self
 	velocidade_maxima_original = velocidade_maxima
 	$Camera2D.zoom = Vector2(zoom_camera, zoom_camera)
 
@@ -23,8 +20,9 @@ func _physics_process(_d: float) -> void:
 	_direcao.y = int(Input.is_action_pressed("andar_pra_baixo")) - int(Input.is_action_pressed("andar_pra_cima"))
 	_direcao = _direcao.normalized()
 	
-	if is_instance_valid(_inimigo):
-		raycast_inimigo.cast_to = position.direction_to(_inimigo.position) * 8
+	var inimigo = Globais.inimigo
+	if is_instance_valid(Globais.inimigo):
+		raycast_inimigo.cast_to = position.direction_to(inimigo.position) * 8
 		var colisor = raycast_inimigo.get_collider()
 		if colisor:
 			colisor.queue_free()

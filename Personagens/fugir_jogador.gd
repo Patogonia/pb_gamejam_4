@@ -35,7 +35,7 @@ func sair() -> void:
 
 
 func _atualizar_direcao() -> void:
-	var dir_fugir = -_personagem.position.direction_to(_personagem.jogador.position)
+	var dir_fugir = -_personagem.position.direction_to(Globais.jogador.position)
 	var vetor_fugir = dir_fugir * distancia_fugir
 	
 	_personagem.atualizar_caminho(vetor_fugir)
