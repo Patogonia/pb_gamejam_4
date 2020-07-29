@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://luz.gd" type="Script" id=1]
+
+[node name="LuzReveladorInimigo" type="Light2D"]
+shadow_enabled = true
+script = ExtResource( 1 )
+
+[node name="ReveladorInimigo" type="Light2D" parent="."]
+mode = 2
+range_item_cull_mask = 2
+shadow_enabled = true
+shadow_item_cull_mask = 3
