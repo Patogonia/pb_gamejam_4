@@ -7,8 +7,12 @@
 [ext_resource path="res://Personagens/MaquinaDeEstados/pegar_alvo.gd" type="Script" id=5]
 [ext_resource path="res://Personagens/fugir_jogador.gd" type="Script" id=6]
 
-[sub_resource type="CanvasItemMaterial" id=1]
+[sub_resource type="CanvasItemMaterial" id=6]
 light_mode = 2
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 16, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 3 )
@@ -26,21 +30,17 @@ region = Rect2( 32, 0, 16, 16 )
 atlas = ExtResource( 3 )
 region = Rect2( 48, 0, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 3 )
-region = Rect2( 16, 0, 16, 16 )
-
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=8]
 animations = [ {
+"frames": [ SubResource( 7 ) ],
+"loop": true,
+"name": "parado",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
 "loop": true,
 "name": "andando",
 "speed": 8.0
-}, {
-"frames": [ SubResource( 6 ) ],
-"loop": true,
-"name": "parado",
-"speed": 5.0
 } ]
 
 [node name="Inimigo" groups=[
@@ -54,10 +54,13 @@ dist_min_fugir = 200.0
 
 [node name="Sprite" parent="." index="0"]
 light_mask = 2
-material = SubResource( 1 )
+material = SubResource( 6 )
 scale = Vector2( 1, 1 )
-frames = SubResource( 7 )
+frames = SubResource( 8 )
 animation = "parado"
+
+[node name="Colisao" parent="." index="1"]
+position = Vector2( 0, 3 )
 
 [node name="DetectorJogador" type="RayCast2D" parent="." index="2"]
 enabled = true
