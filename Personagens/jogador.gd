@@ -1,6 +1,10 @@
 extends "res://Personagens/personagem.gd"
 
 onready var raycast_inimigo: RayCast2D = $RaycastInimigo
+onready var _mensagem: Node2D = $Mensagem
+onready var _texto: Label = $Mensagem/Texto
+onready var _mensagem_tween: Tween = $Mensagem/Texto/Tween
+onready var _timer_esconder_mens: Timer = $Mensagem/Texto/TimerEsconder
 
 export(float) var zoom_camera = .25
 
@@ -40,14 +44,22 @@ func _armadilha_ativada(nova_posicao_armadilha):
 	get_tree().create_timer(7).connect("timeout", self, "_desativar_termometro_seta", ["seta"])
 
 
-func _termometro(is_quente: bool):
-	$Label.visible = true
-	$Label.text = "HOT" if is_quente else "COLD"
-	get_tree().create_timer(2).connect("timeout", self, "_desativar_termometro_seta", ["termometro"])
-
-
 func _desativar_termometro_seta(qual: String):
-	if qual == "termometro":
-		$Label.visible = false
-	elif qual == "seta":
+	if qual == "seta":
 		$SetaArmadilha.visible = false
+
+
+func mostrar_mensagem(mensagem: String) -> void:
+	_texto.text = mensagem
+	_mensagem_tween.interpolate_property(_mensagem, "modulate", Color.transparent, Color.white, .1)
+	_mensagem_tween.interpolate_property(_mensagem, "scale", Vector2(.4, .4), Vector2(.6, .6), 1, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
+	_mensagem_tween.interpolate_property(_mensagem, "position", Vector2(0, -5), Vector2(0, -12), .1)
+	_mensagem_tween.start()
+	_timer_esconder_mens.start()
+
+
+func esconder_mensagem() -> void:
+	_mensagem_tween.interpolate_property(_mensagem, "modulate", Color.white, Color.transparent, .1)
+	_mensagem_tween.interpolate_property(_mensagem, "scale", Vector2(.6, .6), Vector2(.4, .4), .1)
+	_mensagem_tween.interpolate_property(_mensagem, "position", Vector2(0, -12), Vector2(0, -19), .1)
+	_mensagem_tween.start()

@@ -6,6 +6,8 @@
 
 [node name="MesaCafe" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+item_to_instance = "res://Itens/Cafe/Cafe.tscn"
+mensagem_pegar = "Aquired Programmer Drink!"
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 3 )

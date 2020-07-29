@@ -5,8 +5,10 @@
 [sub_resource type="GDScript" id=1]
 script/source = "extends Area2D
 
+const _MENSAGEM_PEGO: String = \"Sneaky boi got a Hard Drive!\"
+
 func _on_Alvo_body_entered(_body):
-	print(name, \" foi pego!\")
+	Globais.jogador.mostrar_mensagem(_MENSAGEM_PEGO)
 	queue_free()
 "
 
