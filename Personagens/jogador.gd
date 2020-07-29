@@ -16,6 +16,7 @@ func _ready() -> void:
 	Globais.jogador = self
 	velocidade_maxima_original = velocidade_maxima
 	$Camera2D.zoom = Vector2(zoom_camera, zoom_camera)
+	Input.set_custom_mouse_cursor(load("res://cursor_ingame.png"))
 
 
 func _physics_process(_d: float) -> void:

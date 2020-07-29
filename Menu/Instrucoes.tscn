@@ -1,0 +1,516 @@
+[gd_scene load_steps=64 format=2]
+
+[ext_resource path="res://Menu/ButtonStyle.png" type="Texture" id=1]
+[ext_resource path="res://Menu/ButtonStyleInverted.png" type="Texture" id=2]
+[ext_resource path="res://MesaRecarregador/mesa.png" type="Texture" id=3]
+[ext_resource path="res://Itens/Cafe/table_cafe.png" type="Texture" id=4]
+[ext_resource path="res://Menu/Instrucoes.gd" type="Script" id=5]
+[ext_resource path="res://Itens/PowerBank/table_powerbank.png" type="Texture" id=6]
+[ext_resource path="res://Itens/Taser/table_taser.png" type="Texture" id=7]
+[ext_resource path="res://Itens/Armadilha/table_trap.png" type="Texture" id=8]
+[ext_resource path="res://Itens/Termometro/table_termometro.png" type="Texture" id=9]
+[ext_resource path="res://Itens/Armadilha/trap.png" type="Texture" id=10]
+[ext_resource path="res://Itens/Cafe/cafezin.png" type="Texture" id=11]
+[ext_resource path="res://Itens/PowerBank/powerbank.png" type="Texture" id=12]
+[ext_resource path="res://Itens/Taser/taser.png" type="Texture" id=13]
+[ext_resource path="res://Itens/Termometro/termometrto.png" type="Texture" id=14]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 1024, 1024 )
+margin_left = 40.0
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 1024, 1024 )
+margin_left = 40.0
+modulate_color = Color( 0.494118, 0.494118, 0.494118, 1 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 1024, 1024 )
+margin_left = 40.0
+modulate_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 1024, 1024 )
+margin_right = 40.0
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 1024, 1024 )
+margin_right = 40.0
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 1024, 1024 )
+margin_right = 40.0
+modulate_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 11 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 11 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 11 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 11 )
+region = Rect2( 192, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 11 )
+region = Rect2( 240, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 11 )
+region = Rect2( 288, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 11 )
+region = Rect2( 336, 0, 48, 48 )
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+} ]
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 12 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 12 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 12 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 12 )
+region = Rect2( 192, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 12 )
+region = Rect2( 240, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 12 )
+region = Rect2( 288, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 12 )
+region = Rect2( 336, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 12 )
+region = Rect2( 384, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 12 )
+region = Rect2( 432, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 12 )
+region = Rect2( 480, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 12 )
+region = Rect2( 528, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 12 )
+region = Rect2( 576, 0, 48, 48 )
+
+[sub_resource type="SpriteFrames" id=29]
+animations = [ {
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+} ]
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 13 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 13 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 13 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 13 )
+region = Rect2( 192, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 13 )
+region = Rect2( 240, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 13 )
+region = Rect2( 288, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 13 )
+region = Rect2( 336, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 13 )
+region = Rect2( 384, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 13 )
+region = Rect2( 432, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 13 )
+region = Rect2( 480, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 13 )
+region = Rect2( 528, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 13 )
+region = Rect2( 576, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 13 )
+region = Rect2( 624, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 13 )
+region = Rect2( 672, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 13 )
+region = Rect2( 720, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 13 )
+region = Rect2( 768, 0, 48, 48 )
+
+[sub_resource type="SpriteFrames" id=47]
+animations = [ {
+"frames": [ SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+} ]
+
+[sub_resource type="SpriteFrames" id=48]
+animations = [ {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=49]
+animations = [ {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Instrucoes" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.109804, 0.109804, 0.109804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="MenuButton" type="Button" parent="."]
+light_mask = 2
+anchor_left = 0.036
+anchor_top = 0.852
+anchor_right = 0.25
+anchor_bottom = 0.938
+margin_left = 0.162544
+margin_top = -0.212128
+margin_right = 0.0265198
+margin_bottom = 0.187866
+focus_mode = 0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+enabled_focus_mode = 0
+text = "MAIN MENU"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="NextButton" type="Button" parent="."]
+light_mask = 2
+anchor_left = 0.75
+anchor_top = 0.852
+anchor_right = 0.964
+anchor_bottom = 0.938
+margin_top = -0.212006
+margin_right = -0.136047
+margin_bottom = 0.188049
+focus_mode = 0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+enabled_focus_mode = 0
+text = "NEXT"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="HowItWorks" type="Label" parent="."]
+anchor_left = 0.032
+anchor_top = 0.063
+anchor_right = 0.131
+anchor_bottom = 0.086
+margin_left = 0.231998
+margin_top = -0.799999
+margin_right = -0.144012
+margin_bottom = -0.600002
+text = "HOW IT WORKS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HowItWorks"]
+anchor_top = 2.0
+anchor_right = 3.723
+anchor_bottom = 33.429
+margin_right = -0.0230408
+margin_bottom = -0.00601196
+text = "You are the guard now, no sneaking around, this time you are the one to stop Sneaky Boy
+
+- Sneaky Boy is trying to get all hard drives, which have important information. Your job is to get him before he grabs enough hard drives
+
+
+- Sneaky Boy has a vest that makes himself invisible, the only way to see him is using your Special Lantern
+
+
+- The Special Lantern has only 60 seconds of battery duration, and without it you won't be able to stop Sneaky Boy, try always to recharge it when possible
+
+
+- When Sneaky Boy finds you he will try to run, if you are not using the lantern he will escape easily, keep an eye for it
+
+
+- You have an inventory that can hold up to 2 items, use the button 1 and 2 on the keyboard to use the respective item
+
+
+- Once you've used an item, it will disappear from your inventory, oppening space to hold another item"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tables" type="Label" parent="."]
+anchor_left = 0.527
+anchor_top = 0.062
+anchor_right = 0.572
+anchor_bottom = 0.085
+margin_left = 0.35199
+margin_top = -0.200001
+margin_right = 0.271973
+text = "ITEMS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MesaRecarregador" type="Label" parent="Tables"]
+anchor_left = 1.522
+anchor_top = 2.929
+anchor_right = 9.13
+anchor_bottom = 6.5
+margin_left = -0.012001
+margin_top = -0.00600052
+margin_right = 0.019989
+margin_bottom = -7.62939e-06
+text = "Table with batteries. Use this table to recharge all of the Special Lantern's battery"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Tables/MesaRecarregador"]
+position = Vector2( -40, 24 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 3 )
+
+[node name="MesaCafe" type="Label" parent="Tables"]
+anchor_left = 1.522
+anchor_top = 8.214
+anchor_right = 9.13
+anchor_bottom = 11.786
+margin_left = -0.012001
+margin_top = 0.00399017
+margin_right = 0.019989
+margin_bottom = -0.0039978
+text = "Table with a cup of Coffee. When consumed, the Coffee will temporarily give you considerable extra speed"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Tables/MesaCafe"]
+position = Vector2( -40, 24 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Tables/MesaCafe"]
+position = Vector2( -100, 18 )
+frames = SubResource( 15 )
+frame = 1
+playing = true
+
+[node name="MesaPowerBank" type="Label" parent="Tables"]
+anchor_left = 1.522
+anchor_top = 13.214
+anchor_right = 9.13
+anchor_bottom = 16.786
+margin_left = -0.012001
+margin_top = 0.00401306
+margin_right = 0.019989
+margin_bottom = -0.0039978
+text = "Table with a Portable Battery. When that battery is used it recharges partially the Special Lantern battery"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Tables/MesaPowerBank"]
+position = Vector2( -40, 24 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 6 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Tables/MesaPowerBank"]
+position = Vector2( -100, 18 )
+frames = SubResource( 29 )
+playing = true
+
+[node name="MesaTaser" type="Label" parent="Tables"]
+anchor_left = 1.522
+anchor_top = 18.214
+anchor_right = 9.13
+anchor_bottom = 21.786
+margin_left = -0.012001
+margin_top = 0.00401306
+margin_right = 0.019989
+margin_bottom = -0.00402832
+text = "Table with a Taser that you can use against Sneaky Boy, if you hit him, he will be paralyzed for some time"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Tables/MesaTaser"]
+position = Vector2( -40, 24 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 7 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Tables/MesaTaser"]
+position = Vector2( -100, 18 )
+frames = SubResource( 47 )
+frame = 1
+playing = true
+
+[node name="MesaTermometro" type="Label" parent="Tables"]
+anchor_left = 1.522
+anchor_top = 23.214
+anchor_right = 9.13
+anchor_bottom = 26.786
+margin_left = -0.012001
+margin_top = 0.00402832
+margin_right = 0.019989
+margin_bottom = -0.00402832
+text = "Table with a Thermometer, which when used, will tell you if Sneaky Boy is close to your current position or not"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Tables/MesaTermometro"]
+position = Vector2( -40, 24 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 9 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Tables/MesaTermometro"]
+position = Vector2( -100, 18 )
+frames = SubResource( 48 )
+playing = true
+
+[node name="MesaArmadilha" type="Label" parent="Tables"]
+anchor_left = 1.522
+anchor_top = 28.214
+anchor_right = 9.13
+anchor_bottom = 31.786
+margin_left = -0.012001
+margin_top = 0.0039978
+margin_right = 0.019989
+margin_bottom = -0.00402832
+text = "Table with a Noise Trap. You can use it to leave the trap on the ground, if Sneaky Boy gets too near it'll activate and you'll see an arrow pointing towards it"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Tables/MesaArmadilha"]
+position = Vector2( -40, 24 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 8 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Tables/MesaArmadilha"]
+position = Vector2( -100, 18 )
+frames = SubResource( 49 )
+playing = true
+[connection signal="pressed" from="MenuButton" to="." method="_on_MenuButton_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
