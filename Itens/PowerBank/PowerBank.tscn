@@ -67,8 +67,9 @@ animations = [ {
 [node name="PowerBank" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 usos = 1
+mensagem_usar = "Increased flashlight batery!"
 bateria_porcentagem = 30.0
 
 [node name="Sprite" parent="." index="0"]
 frames = SubResource( 14 )
-frame = 5
+frame = 3

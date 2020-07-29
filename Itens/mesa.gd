@@ -1,6 +1,9 @@
 extends Node
 
+const MENSAGEM_INVENTARIO_CHEIO: String = "Full pockets!"
+
 export(String) var item_to_instance
+export(String) var mensagem_pegar
 
 var jogador
 var jogador_na_area: bool = false
@@ -10,10 +13,14 @@ var jogador_na_area: bool = false
 func _process(_delta: float) -> void:
 	# Se o jogador clicar o botao de interagir e estiver na area da mesa ele recarrega a bateria
 	var novo_espaco = Globais.inventario._espaco_novo_item()
-	if Input.is_action_just_pressed("interagir") and jogador_na_area and novo_espaco != null:
-		_dar_item(novo_espaco)
-		$BotaoSprite.frame = 0
-		$BotaoSprite.play("default")
+	if Input.is_action_just_pressed("interagir") and jogador_na_area:
+		if novo_espaco != null:
+			_dar_item(novo_espaco)
+			$BotaoSprite.frame = 0
+			$BotaoSprite.play("default")
+		
+		jogador.mostrar_mensagem(mensagem_pegar if novo_espaco != null else MENSAGEM_INVENTARIO_CHEIO)
+		
 
 
 func _dar_item(index):

@@ -13,4 +13,5 @@ func _on_ArmadilhaAtiva_body_entered(body):
 	
 	if resultado.collider == body:
 		emit_signal("inimigo_detectado", position)
+		Globais.jogador.mostrar_mensagem("Sneaky boi stepped on trap!")
 		queue_free()

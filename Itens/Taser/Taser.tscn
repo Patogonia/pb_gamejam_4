@@ -83,10 +83,11 @@ animations = [ {
 [node name="Taser" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 usos = 1
+mensagem_usar = "BzzzZZzzzT!"
 range_de_efeito = 10.0
 velocidade = 0.07
 tempo_de_stun = 1.5
 
 [node name="Sprite" parent="." index="0"]
 frames = SubResource( 18 )
-frame = 10
+frame = 11

@@ -22,6 +22,10 @@ config/icon="res://icon.png"
 
 Globais="*res://globais.gd"
 
+[debug]
+
+settings/fps/force_fps=60
+
 [input]
 
 andar_pra_esquerda={
@@ -73,4 +77,5 @@ item2={
 
 [rendering]
 
+quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"

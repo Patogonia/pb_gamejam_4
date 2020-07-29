@@ -839,7 +839,6 @@ script = SubResource( 78 )
 
 [node name="MesaCafe" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 24, -472 )
-item_to_instance = "res://Itens/Cafe/Cafe.tscn"
 
 [node name="MesaRecarregador" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( -64, -400 )
@@ -857,7 +856,7 @@ position = Vector2( 64, -472 )
 position = Vector2( 64, -400 )
 
 [node name="Jogador" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 0, -424 )
+position = Vector2( -3.17025, -421.163 )
 
 [node name="Inimigo" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 400, 16 )

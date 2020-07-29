@@ -1,5 +1,7 @@
 extends StaticBody2D
 
+const MENSAGEM: String = "Recharged Bateries!"
+
 var jogador
 var jogador_na_area: bool = false
 
@@ -8,6 +10,7 @@ func _process(_delta: float) -> void:
 	# Se o jogador clicar o botao de interagir e estiver na area da mesa ele recarrega a bateria
 	if Input.is_action_just_pressed("interagir") and jogador_na_area:
 		jogador.get_node("Lanterna")._recarregar()
+		jogador.mostrar_mensagem(MENSAGEM)
 		$BotaoSprite.frame = 0
 		$BotaoSprite.play("default")
 

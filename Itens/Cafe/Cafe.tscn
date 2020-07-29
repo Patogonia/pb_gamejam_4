@@ -47,10 +47,11 @@ animations = [ {
 [node name="Cafe" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 usos = 1
+mensagem_usar = "Caffeine Rush!"
+mensagem_ja_tomado = "Wait, or you'll get a heart attack lol"
 multiplicador_de_velocidade = 2.0
 buff_time = 10.0
 
 [node name="Sprite" parent="." index="0"]
 frames = SubResource( 9 )
-frame = 2
-playing = true
+frame = 7
