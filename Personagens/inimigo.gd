@@ -3,6 +3,7 @@ extends "res://Personagens/personagem.gd"
 
 export(bool) var visualizar_caminho
 export(float) var dist_min_fugir
+export(int) var qnt_alvos
 
 onready var _maquina_de_estados = $MaquinaDeEstados
 onready var _detector_jogador: RayCast2D = $DetectorJogador
@@ -12,6 +13,7 @@ var caminho_a_percorrer: PoolVector2Array
 var _stunado: bool = false
 var _indice_pos_caminho: int = 0
 var _posicoes_desenhadas: Array = []
+var alvos_pego: int = 0 setget _definir_alvos_pego
 
 
 func _ready() -> void:
@@ -27,6 +29,10 @@ func _process(delta: float) -> void:
 
 func distancia_jogador_ao_quadrado() -> float:
 	return position.distance_squared_to(Globais.jogador.position)
+
+
+func definir_visivel(v: bool):
+	$Sprite.material.light_mode = CanvasItemMaterial.LIGHT_MODE_LIGHT_ONLY if v else CanvasItemMaterial.LIGHT_MODE_NORMAL 
 
 
 func percorrer_caminho() -> void:
@@ -80,4 +86,24 @@ func stunar(tempo: float) -> void:
 
 
 func destunar() -> void:
+	# Talvez algo externo queira destunar, dai nesse caso, pare o cronometro
+	_tempo_stun.stop()
+	
 	_stunado = false
+
+
+func _definir_ativo(v: bool) -> void:
+	._definir_ativo(v)
+	set_process(v)
+	_detector_jogador.enabled = v
+	
+	if not v:
+		destunar()
+		resetar_caminho()
+
+func _definir_alvos_pego(v: int) -> void:
+	if ativo:
+		alvos_pego = v
+		
+		if alvos_pego >= qnt_alvos:
+			get_tree().current_scene.perder()

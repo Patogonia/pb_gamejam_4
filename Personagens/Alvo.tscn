@@ -2,13 +2,14 @@
 
 [ext_resource path="res://item_inimigo.png" type="Texture" id=1]
 
-[sub_resource type="GDScript" id=1]
+[sub_resource type="GDScript" id=3]
 script/source = "extends Area2D
 
 const _MENSAGEM_PEGO: String = \"Sneaky boi got a Hard Drive!\"
 
 func _on_Alvo_body_entered(_body):
 	Globais.jogador.mostrar_mensagem(_MENSAGEM_PEGO)
+	Globais.inimigo.alvos_pego += 1
 	queue_free()
 "
 
@@ -19,7 +20,7 @@ extents = Vector2( 8, 8 )
 input_pickable = false
 collision_layer = 0
 collision_mask = 2
-script = SubResource( 1 )
+script = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
