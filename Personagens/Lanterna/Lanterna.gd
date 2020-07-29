@@ -1,5 +1,9 @@
 extends Node2D
 
+onready var luz_cone = $LuzCone
+onready var luz_em_volta = $LuzEmVolta
+onready var luz_revelador = $ReveladorInimigo
+
 export(float) var bateria = 60 setget _set_bateria
 # Settar a max_bateria como a bateria pro player ja começar com a max bateria
 # e pra dar de settar um outro valor mais rapido pelo editor
@@ -26,7 +30,8 @@ func _process(delta: float) -> void:
 			piscando = true
 			randomize()
 			$LanternaPiscaTimer.start(rand_range(0.05, 0.3))
-			$Light2D.enabled = false
+			luz_cone.enabled = false
+			luz_em_volta.enabled = false
 			apagada = true
 		# Caso a bateria acabe a lanterna desliga
 		if bateria <= 0:
@@ -40,8 +45,9 @@ func _set_ligada(new: bool) -> void:
 	
 	ligada = new
 	# Caso novo valor for true fica visivel, caso for false não fica visivel
-	$Light2D.enabled = new
-	$ReveladorInimigo.enabled = new
+	luz_cone.enabled = new
+	luz_em_volta.enabled = new
+	luz_revelador.enabled = new
 
 
 # Faz a luz piscar
@@ -49,7 +55,8 @@ func _on_LanternaPiscaTimer_timeout() -> void:
 	if ligada:
 		# Caso esteja apagada ela acende e liga o timer pra apagar dnv
 		if apagada:
-			$Light2D.enabled = true
+			luz_cone.enabled = true
+			luz_em_volta.enabled = true
 			apagada = false
 			$LanternaPiscaTimer.start(rand_range(1, 4))
 		# Desliga o piscando fazendo com que ela apague dnv
@@ -77,4 +84,4 @@ func _set_bateria(new_value) -> void:
 	else:
 		bateria = new_value
 	
-	$Light2D.energy = clamp((bateria / (max_bateria / 100)) / 100, .5, 1)
+	luz_cone.energy = clamp((bateria / (max_bateria / 100)) / 100, .5, 1)
