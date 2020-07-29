@@ -12,7 +12,8 @@ script = ExtResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
+offset = Vector2( 0, 3 )
 
 [node name="Colisao" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 3 )
+position = Vector2( 0, 6 )
 shape = SubResource( 1 )
