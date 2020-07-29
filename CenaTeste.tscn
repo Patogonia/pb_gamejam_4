@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=2]
+[gd_scene load_steps=98 format=2]
 
 [ext_resource path="res://Personagens/Inimigo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://astar.gd" type="Script" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://tileset_astar.png" type="Texture" id=15]
 [ext_resource path="res://lightmask_circulo.png" type="Texture" id=16]
 [ext_resource path="res://LuzReveladorInimigo.tscn" type="PackedScene" id=17]
+[ext_resource path="res://criador_inimigo.gd" type="Script" id=18]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 0, 16, 0, 0, 16, 0, 16, 8, 8, 8, 8, 16 )
@@ -868,6 +869,24 @@ cell_y_sort = true
 collision_layer = 8
 format = 1
 tile_data = PoolIntArray( -2228241, 8, 0, -2228240, 8, 0, -2228239, 8, 0, -2293751, 8, 0, -2293741, 6, 0, -2293737, 6, 0, -2162704, 8, 0, -2162703, 8, 0, -2162702, 8, 0, -2228215, 8, 0, -2228208, 7, 0, -2097167, 8, 0, -2097166, 8, 0, -2162679, 8, 0, -2162677, 7, 0, -2031630, 8, 0, -1966060, 8, 0, -1966059, 8, 0, -1966058, 8, 0, -1966057, 8, 0, -1900525, 7, 0, -1900523, 8, 0, -1900521, 8, 0, -1900520, 6, 0, -1834975, 6, 0, -1769461, 7, 0, -1638431, 7, 0, -1638430, 7, 0, -1638429, 7, 0, -1638426, 7, 0, -1638425, 7, 0, -1638424, 7, 0, -1703906, 6, 0, -1572834, 8, 0, -1507298, 8, 0, -1441762, 8, 0, -1376226, 8, 0, -1376223, 6, 0, -1310710, 7, 0, -1179669, 7, 0, -1179633, 8, 0, -1114097, 8, 0, -1114096, 8, 0, -917523, 6, 0, -917512, 7, 0, -917506, 7, 0, -851997, 6, 0, -917492, 6, 0, -917486, 6, 0, -786464, 6, 0, -851967, 6, 0, -720899, 8, 0, -589845, 7, 0, -589828, 6, 0, -655346, 6, 0, -524298, 7, 0, -524296, 6, 0, -589791, 6, 0, -524271, 7, 0, -393221, 6, 0, -327683, 8, 0, -196610, 8, 0, -262141, 8, 0, -262140, 8, 0, -196575, 6, 0, -65568, 7, 0, -131058, 6, 0, -131057, 6, 0, -65523, 6, 0, -65522, 7, 0, -65521, 8, 0, -65520, 6, 0, -65518, 6, 0, 65528, 6, 0, 13, 6, 0, 14, 8, 0, 15, 7, 0, 16, 6, 0, 131062, 7, 0, 65542, 7, 0, 65547, 7, 0, 65550, 6, 0, 65551, 6, 0, 131072, 6, 0, 458718, 6, 0, 458719, 6, 0, 458734, 7, 0, 393216, 8, 0, 393217, 8, 0, 393218, 8, 0, 393219, 8, 0, 524254, 8, 0, 524255, 8, 0, 524256, 8, 0, 524257, 8, 0, 458752, 8, 0, 458753, 8, 0, 524288, 8, 0, 655326, 6, 0, 655327, 6, 0, 655337, 7, 0, 589824, 8, 0, 589830, 7, 0, 589839, 6, 0, 1048571, 7, 0, 1114079, 6, 0, 1114085, 8, 0, 1114104, 6, 0, 1179621, 8, 0, 1114118, 6, 0, 1114143, 6, 0, 1245157, 8, 0, 1310687, 7, 0, 1310693, 8, 0, 1376229, 8, 0, 1376271, 7, 0, 1507325, 7, 0, 1441814, 6, 0, 1441817, 8, 0, 1441818, 8, 0, 1441819, 8, 0, 1441820, 8, 0, 1441821, 8, 0, 1441822, 8, 0, 1572840, 8, 0, 1572841, 8, 0, 1572863, 6, 0, 1507337, 7, 0, 1638368, 6, 0, 1638376, 8, 0, 1638377, 8, 0, 1638382, 7, 0, 1638386, 7, 0, 1638396, 7, 0, 1572897, 6, 0, 1703912, 8, 0, 1703913, 8, 0 )
+
+[node name="SpawnAleatorioInimigo" type="Node" parent="."]
+script = ExtResource( 18 )
+
+[node name="Spawn" type="Position2D" parent="SpawnAleatorioInimigo"]
+position = Vector2( 400, 16 )
+
+[node name="Spawn2" type="Position2D" parent="SpawnAleatorioInimigo"]
+position = Vector2( 48, 136 )
+
+[node name="Spawn3" type="Position2D" parent="SpawnAleatorioInimigo"]
+position = Vector2( -528, 232 )
+
+[node name="Spawn4" type="Position2D" parent="SpawnAleatorioInimigo"]
+position = Vector2( 80, 384 )
+
+[node name="Spawn5" type="Position2D" parent="SpawnAleatorioInimigo"]
+position = Vector2( -352, -152 )
 
 [node name="Tilemaps" type="Node" parent="."]
 
