@@ -40,7 +40,7 @@ func _process(delta: float) -> void:
 
 func _set_ligada(new: bool) -> void:
 	# Retorna caso n tenha bateria e o player tente ligar
-	if new == true and bateria < 0:
+	if new == true and bateria <= 0:
 		return
 	
 	ligada = new

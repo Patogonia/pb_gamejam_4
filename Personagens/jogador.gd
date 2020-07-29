@@ -17,6 +17,8 @@ func _ready() -> void:
 	velocidade_maxima_original = velocidade_maxima
 	$Camera2D.zoom = Vector2(zoom_camera, zoom_camera)
 	Input.set_custom_mouse_cursor(load("res://cursor_ingame.png"))
+	yield(get_tree(), "idle_frame")
+	mostrar_mensagem("Sneaky Boy must not get %d hard drives!" % Globais.inimigo.qnt_alvos)
 
 
 func _physics_process(_d: float) -> void:
@@ -29,8 +31,9 @@ func _physics_process(_d: float) -> void:
 	if is_instance_valid(Globais.inimigo):
 		raycast_inimigo.cast_to = position.direction_to(inimigo.position) * 8
 		var colisor = raycast_inimigo.get_collider()
-		if colisor:
-			colisor.queue_free()
+		if colisor and $Lanterna.ligada:
+			get_tree().current_scene.ganhar()
+			return
 	
 	$SetaArmadilha.look_at(posicao_armadilha)
 
@@ -64,3 +67,16 @@ func esconder_mensagem() -> void:
 	_mensagem_tween.interpolate_property(_mensagem, "scale", Vector2(.6, .6), Vector2(.4, .4), .1)
 	_mensagem_tween.interpolate_property(_mensagem, "position", Vector2(0, -12), Vector2(0, -19), .1)
 	_mensagem_tween.start()
+
+
+func _definir_ativo(v: bool) -> void:
+	._definir_ativo(v)
+	raycast_inimigo.enabled = v
+	
+	if not v:
+		if not _timer_esconder_mens.is_stopped():
+			_timer_esconder_mens.stop()
+			esconder_mensagem()
+		
+		_desativar_termometro_seta("seta")
+		_fim_buff_cafe()
