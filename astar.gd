@@ -20,8 +20,6 @@ func _ready() -> void:
 	# Pegar celulas marcadas com nada, adicionar elas ao astar e ao _andavel
 	var inicio: Vector2 = _retangulo_mapa.position
 	var fim: Vector2 = _retangulo_mapa.end
-	print(inicio)
-	print(fim)
 	
 	for y in range(inicio.y, fim.y):
 		for x in range(inicio.x, fim.x):
