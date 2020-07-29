@@ -1,14 +1,8 @@
 extends Node
 
-export(NodePath) var caminho_jogador
-export(NodePath) var caminho_inimigo
-
-var _jogador: KinematicBody2D
-var _inimigo: KinematicBody2D
 
 func _ready() -> void:
-	_jogador = get_node(caminho_jogador)
-	_inimigo = get_node(caminho_inimigo)
+	Globais.alvos = self
 
 
 # Pega o melhor alvo para o inimigo
@@ -36,8 +30,8 @@ func pegar_alvo() -> Node2D:
 	
 	for alvo in get_children():
 		var pos_alvo: Vector2 = alvo.position
-		var d_a_j: float = _jogador.position.distance_squared_to(pos_alvo)
-		var d_a_i: float = _inimigo.position.distance_squared_to(pos_alvo)
+		var d_a_j: float = Globais.jogador.position.distance_squared_to(pos_alvo)
+		var d_a_i: float = Globais.inimigo.position.distance_squared_to(pos_alvo)
 		
 		pontuacao_alvos[alvo] = 100 / d_a_i - 100 / d_a_j
 #		print(alvo.name, " ", pontuacao_alvos[alvo])

@@ -10,13 +10,13 @@ func _dar_item(index):
 		# Setta o index no inventario do item
 		item_instance.item_index = index
 		# Adiciona ele no lugar dele no invetario
-		inventario.get_node("Item" + str(index + 1)).add_child(item_instance)
+		Globais.inventario.get_node("Item" + str(index + 1)).add_child(item_instance)
 		# Setta na posição 0 no node pai dele
 		item_instance.position = Vector2(0, 0)
 		# Da a referencia pro inventario pro item
-		item_instance.inventario = self.inventario
+		item_instance.inventario = Globais.inventario
 		# Adiciona no array inventario
-		inventario.itens[index] = item_instance
+		Globais.inventario.itens[index] = item_instance
 		# Setta uma referencia pra essa mesa
 		item_instance.mesa = self
 

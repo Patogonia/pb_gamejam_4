@@ -4,14 +4,12 @@ export(bool) var testar_caminho
 export(float) var tempo_atualizar_alvo
 export(float) var distancia_max
 
-var _alvos_inimigo
 var _alvo_atual: Node2D
 var _cronometro_atualizar_alvo: Timer
 
 
 func iniciar(maquina_de_estado) -> void:
 	.iniciar(maquina_de_estado)
-	_alvos_inimigo = _personagem.alvos_inimigo
 	_cronometro_atualizar_alvo = Timer.new()
 	_cronometro_atualizar_alvo.wait_time = tempo_atualizar_alvo
 	_cronometro_atualizar_alvo.connect("timeout", self, "_atualizar_alvo")
@@ -57,7 +55,7 @@ func _atualizar_caminho() -> void:
 
 
 func _atualizar_alvo() -> void:
-	var novo_alvo: Node2D = _alvos_inimigo.pegar_alvo() 
+	var novo_alvo: Node2D = Globais.alvos.pegar_alvo() 
 	if novo_alvo == _alvo_atual:
 		# Talvez dar uma olhada se o caminho ainda ta ok ?
 		pass

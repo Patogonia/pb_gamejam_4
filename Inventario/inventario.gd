@@ -1,24 +1,19 @@
 extends HBoxContainer
 
-var _jogador
 var itens: Array = [
 	null,
 	null
 ]
 
 
-# Pega o node do jogador pra dar pros itens depois
-func _ready():
-	_jogador = get_parent().get_node("../Jogador")
-
 
 func _process(_delta: float) -> void:
 	# Se clicar o botao e o item existir ele usa o item
 	if Input.is_action_just_pressed("item1") and itens[0] != null:
-		itens[0]._use(_jogador)
+		itens[0]._use(Globais.jogador)
 	
 	if Input.is_action_just_pressed("item2") and itens[1] != null:
-		itens[1]._use(_jogador)
+		itens[1]._use(Globais.jogador)
 
 
 # Checka se tem espaco pra um novo item, se n tiver retorna false, se tiver retorna o index do array

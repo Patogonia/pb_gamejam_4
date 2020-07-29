@@ -63,7 +63,7 @@ func _recarregar():
 	apagada = false
 	
 	_set_bateria(max_bateria)
-	_set_ligada(ligada)
+	_set_ligada(true)
 	
 	$LanternaPiscaTimer.stop()
 

@@ -8,6 +8,8 @@ var _obstaculos: Array = []
 var _retangulo_mapa: Rect2
 
 func _ready() -> void:
+	Globais.mapa_pathfinding = self
+	
 	_retangulo_mapa = get_used_rect()
 	_astar = AStar2D.new()
 #	_astar.reserve_space(int(_retangulo_mapa.size.x * _retangulo_mapa.size.y))

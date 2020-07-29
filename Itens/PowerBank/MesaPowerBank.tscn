@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://MesaRecarregador/MesaRecarregador.tscn" type="PackedScene" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Itens/PowerBank/table_powerbank.png" type="Texture" id=2]
 [ext_resource path="res://Itens/mesa.gd" type="Script" id=3]
 
 [node name="MesaPowerBank" instance=ExtResource( 1 )]

@@ -1,17 +1,9 @@
 extends "res://Personagens/personagem.gd"
 
 
-export(NodePath) var caminho_jogador
-export(NodePath) var caminho_alvos_inimigo
-export(NodePath) var caminho_mapa_pathfinding
-export(NodePath) var caminho_desenhador_caminho
 export(bool) var visualizar_caminho
 export(float) var dist_min_fugir
 
-onready var alvos_inimigo = get_node(caminho_alvos_inimigo)
-onready var mapa_pathfinding = get_node(caminho_mapa_pathfinding)
-onready var jogador: KinematicBody2D = get_node(caminho_jogador)
-onready var _desenhador_caminho = get_node(caminho_desenhador_caminho)
 onready var _maquina_de_estados = $MaquinaDeEstados
 onready var _detector_jogador: RayCast2D = $DetectorJogador
 onready var _tempo_stun: Timer = $TempoStun
@@ -22,15 +14,19 @@ var _indice_pos_caminho: int = 0
 var _posicoes_desenhadas: Array = []
 
 
+func _ready() -> void:
+	Globais.inimigo = self
+
+
 func _process(delta: float) -> void:
 	_maquina_de_estados.executar(delta)
 	
-	if jogador:
-		_detector_jogador.cast_to = position.direction_to(jogador.position) * dist_min_fugir
+	if Globais.jogador:
+		_detector_jogador.cast_to = position.direction_to(Globais.jogador.position) * dist_min_fugir
 
 
 func distancia_jogador_ao_quadrado() -> float:
-	return position.distance_squared_to(jogador.position)
+	return position.distance_squared_to(Globais.jogador.position)
 
 
 func percorrer_caminho() -> void:
@@ -57,7 +53,7 @@ func jogador_esta_visivel() -> bool:
 
 func atualizar_caminho(alvo: Vector2) -> void:
 	resetar_caminho()
-	caminho_a_percorrer = mapa_pathfinding.pegar_caminho_coords_mundo(position, alvo)
+	caminho_a_percorrer = Globais.mapa_pathfinding.pegar_caminho_coords_mundo(position, alvo)
 	
 	if visualizar_caminho:
 		_desenhar_caminho()
@@ -70,7 +66,7 @@ func resetar_caminho() -> void:
 
 func _desenhar_caminho() -> void:
 	if visualizar_caminho:
-		_desenhador_caminho.caminho = caminho_a_percorrer
+		Globais.desenhador_caminho.caminho = caminho_a_percorrer
 
 
 func _processar_movimento(delta: float) -> void:
