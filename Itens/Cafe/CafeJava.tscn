@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Itens/Cafe/Cafe.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Itens/Cafe/cafeJava.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="CafeJava" instance=ExtResource( 1 )]
+mensagem_usar = "NullReferenceException"
+mensagem_ja_tomado = "This one ain't gonna be fast"
+multiplicador_de_velocidade = 0.5
+
+[node name="Sprite" parent="." index="0"]
+frames = SubResource( 1 )
+frame = 0

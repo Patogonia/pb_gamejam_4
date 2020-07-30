@@ -54,4 +54,4 @@ buff_time = 10.0
 
 [node name="Sprite" parent="." index="0"]
 frames = SubResource( 9 )
-frame = 7
+frame = 4

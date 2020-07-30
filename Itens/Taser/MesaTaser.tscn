@@ -7,7 +7,7 @@
 [node name="MesaTaser" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 item_to_instance = "res://Itens/Taser/Taser.tscn"
-mensagem_pegar = "Aquired Teslas Toy!"
+mensagem_pegar = "Acquired Teslas Toy!"
 
 [node name="Sprite" parent="." index="0"]
 position = Vector2( 1.7053e-13, -5.06639e-07 )
