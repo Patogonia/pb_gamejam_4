@@ -248,6 +248,18 @@ tracks/7/keys = {
 "update": 1,
 "values": [ true, false ]
 }
+tracks/8/type = "value"
+tracks/8/path = NodePath("HBoxContainer/MenuPrincipal:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [node name="HUD" type="CanvasLayer"]
 
@@ -265,8 +277,8 @@ __meta__ = {
 }
 
 [node name="Item1" type="Panel" parent="Inventario"]
-margin_left = 1.0
-margin_right = 49.0
+margin_left = 2.0
+margin_right = 50.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 48, 48 )
 __meta__ = {
@@ -274,8 +286,8 @@ __meta__ = {
 }
 
 [node name="Item2" type="Panel" parent="Inventario"]
-margin_left = 53.0
-margin_right = 101.0
+margin_left = 54.0
+margin_right = 102.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 48, 48 )
 __meta__ = {
@@ -313,7 +325,7 @@ rect_pivot_offset = Vector2( 50, 7 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
-text = "You won!"
+text = "You lost"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -348,7 +360,7 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 disabled = true
-text = "Next Level"
+text = "Restart Level"
 align = 0
 
 [node name="VSeparator" type="VSeparator" parent="TelaGanharPerder/HBoxContainer"]

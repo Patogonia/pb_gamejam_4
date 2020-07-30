@@ -35,12 +35,22 @@ func definir_visivel(v: bool):
 	$Sprite.material.light_mode = CanvasItemMaterial.LIGHT_MODE_LIGHT_ONLY if v else CanvasItemMaterial.LIGHT_MODE_NORMAL 
 
 
+func andar_em_direcao_a_pos(pos: Vector2) -> void:
+	_direcao = position.direction_to(pos)
+
+
 func percorrer_caminho() -> void:
 	if caminho_a_percorrer.size() == 0:
 		_direcao = Vector2.ZERO
 		return
 	
-	if position.distance_squared_to(caminho_a_percorrer[_indice_pos_caminho]) < 5*5:
+#	var pos_atual: Vector2 = caminho_a_percorrer[_indice_pos_caminho]
+#	var prox_pos: Vector2 = Vector2.ZERO if _indice_pos_caminho + 1 >= caminho_a_percorrer.size() else caminho_a_percorrer[_indice_pos_caminho + 1]
+#	var dir_pers_pos_cam: Vector2 = pos_atual.direction_to(position)
+#	var dir_posatual_proxpos: Vector2 = pos_atual.direction_to(prox_pos)
+	
+	# Passar pro proximo ponto se ele estiver perto deste ponto e estiver relativamente entre este e o proximo ponto
+	if position.distance_squared_to(caminho_a_percorrer[_indice_pos_caminho]) < 10*10:
 		if _indice_pos_caminho + 1 < caminho_a_percorrer.size():
 			_indice_pos_caminho += 1
 		else:
@@ -57,9 +67,9 @@ func jogador_esta_visivel() -> bool:
 	return _detector_jogador.get_collider().name == "Jogador"
 
 
-func atualizar_caminho(alvo: Vector2) -> void:
+func atualizar_caminho(alvo: Vector2, fugindo: bool = false) -> void:
 	resetar_caminho()
-	caminho_a_percorrer = Globais.mapa_pathfinding.pegar_caminho_coords_mundo(position, alvo)
+	caminho_a_percorrer = Globais.mapa_pathfinding.pegar_caminho_coords_mundo(position, alvo, fugindo)
 	
 	if visualizar_caminho:
 		_desenhar_caminho()

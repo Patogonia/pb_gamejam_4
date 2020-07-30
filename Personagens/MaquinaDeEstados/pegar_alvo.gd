@@ -67,12 +67,8 @@ func _atualizar_caminho() -> void:
 
 func _atualizar_alvo() -> void:
 	if Globais.alvos.get_child_count() > 0:
-		var novo_alvo: Node2D = Globais.alvos.pegar_alvo() 
-		if novo_alvo == _alvo_atual:
-			# Talvez dar uma olhada se o caminho ainda ta ok ?
-			pass
-		else:
-			_alvo_atual = novo_alvo
-			_atualizar_caminho()
+		_alvo_atual = Globais.alvos.pegar_alvo() 
+		
+		_atualizar_caminho()
 	else:
 		_alvo_atual = null
