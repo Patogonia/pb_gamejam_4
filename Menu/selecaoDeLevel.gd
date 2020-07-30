@@ -1,5 +1,12 @@
 extends Control
 
+func _process(_delta: float):
+	var new_scale = Vector2(1, 1)
+	new_scale.x = (OS.get_window_size().x / (1024 / 100)) / 70
+	new_scale.y = (OS.get_window_size().y / (600 / 100)) / 70
+	$Level1/Control/Sprite.scale = new_scale
+	$Level2/Control/Sprite.scale = new_scale
+
 
 func _on_MenuButton_pressed():
 	assert(get_tree().change_scene("res://Menu/Menu.tscn") == OK)
