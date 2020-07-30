@@ -7,7 +7,7 @@
 [node name="MesaArmadilha" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 item_to_instance = "res://Itens/Armadilha/Armadilha.tscn"
-mensagem_pegar = "Aquired Loud Trap!"
+mensagem_pegar = "Acquired Loud Trap!"
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 3 )

@@ -1050,5 +1050,5 @@ script = SubResource( 79 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -216, -552 )
 frames = SubResource( 108 )
-frame = 15
+frame = 13
 playing = true
