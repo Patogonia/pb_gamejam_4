@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=2]
+[gd_scene load_steps=129 format=2]
 
 [ext_resource path="res://Personagens/Inimigo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://astar.gd" type="Script" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://LuzReveladorInimigo.tscn" type="PackedScene" id=17]
 [ext_resource path="res://criador_inimigo.gd" type="Script" id=18]
 [ext_resource path="res://cutscene.gd" type="Script" id=19]
+[ext_resource path="res://box.png" type="Texture" id=20]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 0, 16, 0, 0, 16, 0, 16, 8, 8, 8, 8, 16 )
@@ -703,8 +704,128 @@ func _ready() -> void:
 	Globais.tela_ganhar_perder = $TelaGanharPerder
 "
 
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 20 )
+region = Rect2( 0, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 20 )
+region = Rect2( 20, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 20 )
+region = Rect2( 40, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 20 )
+region = Rect2( 60, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=84]
+atlas = ExtResource( 20 )
+region = Rect2( 80, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=85]
+atlas = ExtResource( 20 )
+region = Rect2( 100, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=86]
+atlas = ExtResource( 20 )
+region = Rect2( 120, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=87]
+atlas = ExtResource( 20 )
+region = Rect2( 140, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=88]
+atlas = ExtResource( 20 )
+region = Rect2( 160, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=89]
+atlas = ExtResource( 20 )
+region = Rect2( 180, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=90]
+atlas = ExtResource( 20 )
+region = Rect2( 200, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=91]
+atlas = ExtResource( 20 )
+region = Rect2( 220, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=92]
+atlas = ExtResource( 20 )
+region = Rect2( 240, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=93]
+atlas = ExtResource( 20 )
+region = Rect2( 260, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=94]
+atlas = ExtResource( 20 )
+region = Rect2( 280, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=95]
+atlas = ExtResource( 20 )
+region = Rect2( 300, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=96]
+atlas = ExtResource( 20 )
+region = Rect2( 320, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=97]
+atlas = ExtResource( 20 )
+region = Rect2( 340, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=98]
+atlas = ExtResource( 20 )
+region = Rect2( 360, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=99]
+atlas = ExtResource( 20 )
+region = Rect2( 380, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=100]
+atlas = ExtResource( 20 )
+region = Rect2( 400, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=101]
+atlas = ExtResource( 20 )
+region = Rect2( 420, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=102]
+atlas = ExtResource( 20 )
+region = Rect2( 440, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=103]
+atlas = ExtResource( 20 )
+region = Rect2( 460, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=104]
+atlas = ExtResource( 20 )
+region = Rect2( 480, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=105]
+atlas = ExtResource( 20 )
+region = Rect2( 500, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=106]
+atlas = ExtResource( 20 )
+region = Rect2( 520, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=107]
+atlas = ExtResource( 20 )
+region = Rect2( 540, 0, 20, 20 )
+
+[sub_resource type="SpriteFrames" id=108]
+animations = [ {
+"frames": [ SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ), SubResource( 96 ), SubResource( 97 ), SubResource( 98 ), SubResource( 99 ), SubResource( 100 ), SubResource( 101 ), SubResource( 102 ), SubResource( 103 ), SubResource( 104 ), SubResource( 105 ), SubResource( 106 ), SubResource( 107 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
 [node name="CenaTeste" type="CanvasModulate"]
-color = Color( 0.0705882, 0.0705882, 0.0705882, 1 )
+color = Color( 0.0980392, 0.0980392, 0.0980392, 1 )
 script = ExtResource( 19 )
 
 [node name="Iluminacao" type="Node" parent="."]
@@ -863,7 +984,7 @@ position = Vector2( -3.17025, -421.163 )
 
 [node name="Inimigo" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 400, 16 )
-qnt_alvos = 1
+qnt_alvos = 4
 
 [node name="Props" type="TileMap" parent="YSort"]
 tile_set = SubResource( 76 )
@@ -925,3 +1046,9 @@ position = Vector2( 368, -360 )
 script = SubResource( 79 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -216, -552 )
+frames = SubResource( 108 )
+frame = 15
+playing = true

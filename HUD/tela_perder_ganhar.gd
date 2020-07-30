@@ -21,4 +21,4 @@ func _ao_clicar_botao_1() -> void:
 
 func _ao_clicar_menu_principal():
 	# Mandar do menu principal
-	pass # Replace with function body.
+	get_tree().change_scene("res://Menu/Menu.tscn")

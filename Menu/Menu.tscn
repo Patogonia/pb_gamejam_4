@@ -237,6 +237,7 @@ use_parent_material = true
 position = Vector2( 481.555, 346.258 )
 scale = Vector2( 6.45419, 6.31536 )
 frames = SubResource( 8 )
+frame = 1
 playing = true
 
 [node name="Light2D" type="Light2D" parent="Background/Jogador"]

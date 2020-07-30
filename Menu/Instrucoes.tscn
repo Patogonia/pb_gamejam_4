@@ -331,24 +331,24 @@ anchor_right = 3.723
 anchor_bottom = 33.429
 margin_right = -0.0230408
 margin_bottom = -0.00601196
-text = "You are the guard now, no sneaking around, this time you are the one to stop Sneaky Boy
+text = "You are the guard now, no more sneaking around! This time, you are the one to stop Sneaky Boy!
 
-- Sneaky Boy is trying to get all hard drives, which have important information. Your job is to get him before he grabs enough hard drives
-
-
-- Sneaky Boy has a vest that makes himself invisible, the only way to see him is using your Special Lantern
+- Sneaky Boy is trying to get all hard drives containing important information about our \"ethically questionable organization\". Your job is to get him before he grabs enough hard drives
 
 
-- The Special Lantern has only 60 seconds of battery duration, and without it you won't be able to stop Sneaky Boy, try always to recharge it when possible
+- Sneaky Boy has a vest that makes himself invisible, the only way to see him is by using your Special Lantern
 
 
-- When Sneaky Boy finds you he will try to run, if you are not using the lantern he will escape easily, keep an eye for it
+- The Special Lantern has only 60 seconds of battery duration, and without it you won't be able to stop Sneaky Boy. Always try to recharge it when possible
 
 
-- You have an inventory that can hold up to 2 items, use the button 1 and 2 on the keyboard to use the respective item
+- When Sneaky Boy finds you he will try to run. If you are not using the lantern, he will escape easily
 
 
-- Once you've used an item, it will disappear from your inventory, oppening space to hold another item"
+- You have an inventory that can hold up to 2 items. Use the button 1 and 2 on your keyboard to use the respective item
+
+
+- Once you've used an item, it will disappear from your inventory, opening space to hold another item"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -375,7 +375,7 @@ margin_left = -0.012001
 margin_top = -0.00600052
 margin_right = 0.019989
 margin_bottom = -7.62939e-06
-text = "Table with batteries. Use this table to recharge all of the Special Lantern's battery"
+text = "Battery table: Use this table to fully recharge your Special Lantern"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -395,7 +395,7 @@ margin_left = -0.012001
 margin_top = 0.00399017
 margin_right = 0.019989
 margin_bottom = -0.0039978
-text = "Table with a cup of Coffee. When consumed, the Coffee will temporarily give you considerable extra speed"
+text = "Coffe table: Gives you a cup of coffee. When consumed, the Coffee will temporarily give you a considerable extra speed"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -409,7 +409,7 @@ texture = ExtResource( 4 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Tables/MesaCafe"]
 position = Vector2( -100, 18 )
 frames = SubResource( 15 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="MesaPowerBank" type="Label" parent="Tables"]
@@ -421,7 +421,7 @@ margin_left = -0.012001
 margin_top = 0.00401306
 margin_right = 0.019989
 margin_bottom = -0.0039978
-text = "Table with a Portable Battery. When that battery is used it recharges partially the Special Lantern battery"
+text = "Portable Battery table: Gives you a portable battery. When this item is used, it partially recharges your Special Lantern"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -435,6 +435,7 @@ texture = ExtResource( 6 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Tables/MesaPowerBank"]
 position = Vector2( -100, 18 )
 frames = SubResource( 29 )
+frame = 4
 playing = true
 
 [node name="MesaTaser" type="Label" parent="Tables"]
@@ -446,7 +447,7 @@ margin_left = -0.012001
 margin_top = 0.00401306
 margin_right = 0.019989
 margin_bottom = -0.00402832
-text = "Table with a Taser that you can use against Sneaky Boy, if you hit him, he will be paralyzed for some time"
+text = "Taser table: Gives you a taser, which is able to temporarily paralize Sneaky Boy, if you hit him of course"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -460,7 +461,7 @@ texture = ExtResource( 7 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Tables/MesaTaser"]
 position = Vector2( -100, 18 )
 frames = SubResource( 47 )
-frame = 1
+frame = 12
 playing = true
 
 [node name="MesaTermometro" type="Label" parent="Tables"]
@@ -472,7 +473,7 @@ margin_left = -0.012001
 margin_top = 0.00402832
 margin_right = 0.019989
 margin_bottom = -0.00402832
-text = "Table with a Thermometer, which when used, will tell you if Sneaky Boy is close to your current position or not"
+text = "Thermometer table: Gives you a thermometer that, when used, tells you if Sneaky Boy is \"cold or hot\"."
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -497,7 +498,7 @@ margin_left = -0.012001
 margin_top = 0.0039978
 margin_right = 0.019989
 margin_bottom = -0.00402832
-text = "Table with a Noise Trap. You can use it to leave the trap on the ground, if Sneaky Boy gets too near it'll activate and you'll see an arrow pointing towards it"
+text = "Noise Trap table: Gives you a noise trap. You can use it to leave a trap on the ground, that will activate when Sneaky Boy gets near it, showing you an arrow that points towards the activated trap"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
