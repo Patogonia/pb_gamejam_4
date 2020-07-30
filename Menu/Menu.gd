@@ -8,9 +8,6 @@ func _ready():
 func _process(_delta: float):
 	$Background.scale.x = (OS.get_window_size().x / (1024 / 100)) / 100
 	$Background.scale.y = (OS.get_window_size().y / (600 / 100)) / 100
-	
-	if $Background/Trovao/TrovaoSom.get_playback_position() > 4.70:
-		$Background/Trovao/TrovaoSom.stop()
 
 
 func _on_PlayButton_pressed():

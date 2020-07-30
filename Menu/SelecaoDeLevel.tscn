@@ -122,6 +122,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Control" type="Control" parent="Level1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 0.0400085
+margin_top = 0.010025
+margin_right = 0.0400085
+margin_bottom = 0.010025
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Level1/Control"]
+scale = Vector2( 1.42523, 1.42523 )
+texture = ExtResource( 3 )
+
 [node name="LevelLabel" type="Label" parent="Level1"]
 anchor_top = 0.023
 anchor_right = 1.0
@@ -135,11 +152,6 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Sprite" type="Sprite" parent="Level1"]
-position = Vector2( 100, 172.793 )
-scale = Vector2( 1.42523, 1.42523 )
-texture = ExtResource( 3 )
 
 [node name="BestTimeLabel" type="Label" parent="Level1"]
 anchor_top = 0.875
@@ -182,6 +194,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Control" type="Control" parent="Level2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 7.62939e-06
+margin_top = 0.010025
+margin_right = 7.62939e-06
+margin_bottom = 0.010025
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Level2/Control"]
+scale = Vector2( 1.42523, 1.42523 )
+
 [node name="LevelLabel" type="Label" parent="Level2"]
 anchor_top = 0.023
 anchor_right = 1.0
@@ -193,13 +221,6 @@ THE BUILDING"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
-}
-
-[node name="Sprite" type="Sprite" parent="Level2"]
-position = Vector2( 100, 172.793 )
-scale = Vector2( 1.42523, 1.42523 )
-__meta__ = {
-"_editor_description_": ""
 }
 
 [node name="BestTimeLabel" type="Label" parent="Level2"]
