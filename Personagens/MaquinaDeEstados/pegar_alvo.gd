@@ -44,7 +44,10 @@ func executar(_delta: float) -> String:
 		_atualizar_caminho()
 	
 	# Percorrer o caminho
-	_personagem.percorrer_caminho()
+	if _personagem._indice_pos_caminho == tam_caminho - 1:
+		_personagem.andar_em_direcao_a_pos(_alvo_atual.position)
+	else:
+		_personagem.percorrer_caminho()
 	
 	return ""
 
