@@ -1,5 +1,7 @@
 extends Control
 
+const _TEMPLATE_TEXTO_TEMPO: String = "Elapsed time: {t}"
+
 var ganho: bool
 
 func exibir_perder() -> void:
@@ -8,10 +10,12 @@ func exibir_perder() -> void:
 	$AnimationPlayer.play("Perder")
 
 
-func exibir_ganhar() -> void:
+func exibir_ganhar(tempo: int) -> void:
 	ganho = true
 	self.visible = true
+	$Tempo.text = _TEMPLATE_TEXTO_TEMPO.format({"t": Globais.formatar_tempo(tempo)})
 	$AnimationPlayer.play("Ganhar")
+
 
 
 func _ao_clicar_botao_1() -> void:

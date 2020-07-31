@@ -20,7 +20,7 @@ class AstarNovo extends AStar2D:
 		var de_pos: Vector2 = get_point_position(de_id)
 		var para_pos: Vector2 = get_point_position(para_id)
 		# Adicionar custo para celulas que estao perto 
-		var custo_extra: float = 0 if not fugindo else de_pos.distance_squared_to(pos_jog)
+		var custo_extra: float = 0.0 if not fugindo else de_pos.distance_squared_to(pos_jog)
 		
 		return de_pos.distance_to(para_pos) + custo_extra
 	
@@ -119,7 +119,7 @@ func _pegar_caminho_coords_mapa(inicio: Vector2, fim: Vector2, fugindo: bool = f
 func pegar_caminho_coords_mundo(inicio: Vector2, fim: Vector2, fugindo: bool = false) -> PoolVector2Array:
 	var inicio_grade: Vector2 = _astar.get_point_position(_astar.get_closest_point(world_to_map(inicio)))
 	var fim_grade: Vector2 = _astar.get_point_position(_astar.get_closest_point(world_to_map(fim)))
-	var caminho: PoolVector2Array = _pegar_caminho_coords_mapa(inicio_grade, fim_grade)
+	var caminho: PoolVector2Array = _pegar_caminho_coords_mapa(inicio_grade, fim_grade, fugindo)
 	
 	for i in range(caminho.size()):
 		caminho[i] = map_to_world(caminho[i]) + cell_size * .5
@@ -163,13 +163,13 @@ func _atualizar_pesos():
 # porem, funciona para o caso do inimigo achar uma posicao a uma distancia especifica
 # quando ele ta fugindo do jogador
 func pegar_pontos_em_circunferencia_mapa(c: Vector2, r: float) -> PoolVector2Array:
-	var res: PoolVector2Array
+	var res: PoolVector2Array = []
 	var c_ponto: Vector2 = _astar.get_point_position(_astar.get_closest_point(c))
 	
 	for y in range(-r, r):
 		var dx = int(sqrt(r * r - y * y))
-		var p1: Vector2 = c + Vector2(-dx, y)
-		var p2: Vector2 = c + Vector2(dx, y)
+		var p1: Vector2 = c_ponto + Vector2(-dx, y)
+		var p2: Vector2 = c_ponto + Vector2(dx, y)
 		
 		if _astar.has_point(_calcular_indice_celula(p1)):
 			res.push_back(p1)

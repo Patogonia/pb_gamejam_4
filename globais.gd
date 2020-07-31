@@ -14,3 +14,11 @@ var alvos
 var mapa_pathfinding
 var desenhador_caminho
 var armazem_armadilhas
+
+
+func formatar_tempo(t: int) -> String:
+	return "{m}:{s}".format({
+		"m": "%02d" % (t / 60),
+		"s": "%02d" % (t % 60)
+	})
+	
