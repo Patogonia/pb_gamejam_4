@@ -10,7 +10,7 @@ func _process(_delta: float):
 	new_scale.x = (OS.get_window_size().x / (1024 / 100)) / 70
 	new_scale.y = (OS.get_window_size().y / (600 / 100)) / 70
 	$Outside/Control/Sprite.scale = new_scale
-	$TheBuilding/Control/Sprite.scale = new_scale
+	$TheBuilding/Control/Sprite.scale = new_scale / 2.4
 
 
 func _on_MenuButton_pressed():
@@ -23,9 +23,10 @@ func _on_Button_Level1_pressed():
 	assert(get_tree().change_scene("res://CenaTeste.tscn") == OK)
 
 func _on_Button_Level2_pressed():
-	fade()
-	yield(get_tree().create_timer(1.5), "timeout")
-	assert(get_tree().change_scene("res://Level2.tscn") == OK)
+	if SalvarCarregar.save_carregado.Outside != 0:
+		fade()
+		yield(get_tree().create_timer(1.5), "timeout")
+		assert(get_tree().change_scene("res://Level2.tscn") == OK)
 
 
 func fade() -> void:
