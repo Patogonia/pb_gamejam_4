@@ -1,6 +1,7 @@
 extends Node
 
 export(AudioStreamOGGVorbis) var musica 
+onready var tempo_inicial: int = OS.get_unix_time()
 
 func _ready() -> void:
 	Musica.stream = musica
@@ -8,8 +9,10 @@ func _ready() -> void:
 
 
 func ganhar() -> void:
+	var tempo_percorrido: int = OS.get_unix_time() - tempo_inicial
 	_configurar_personagens()
-	Globais.tela_ganhar_perder.exibir_ganhar()
+	SalvarCarregar.salvar_pontuacao(name, tempo_percorrido)
+	Globais.tela_ganhar_perder.exibir_ganhar(tempo_percorrido)
 
 
 func perder() -> void:

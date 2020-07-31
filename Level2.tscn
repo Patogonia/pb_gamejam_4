@@ -670,7 +670,7 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[node name="Level2" type="CanvasModulate"]
+[node name="TheBuilding" type="CanvasModulate"]
 color = Color( 0.0980392, 0.0980392, 0.0980392, 1 )
 script = ExtResource( 17 )
 __meta__ = {
@@ -956,7 +956,7 @@ position = Vector2( 51.0257, 688 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1040, 40 )
 frames = SubResource( 69 )
-frame = 7
+frame = 2
 playing = true
 
 [node name="HUD" parent="." instance=ExtResource( 12 )]
