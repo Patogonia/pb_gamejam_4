@@ -85,4 +85,4 @@ func _set_bateria(new_value) -> void:
 	else:
 		bateria = new_value
 	
-	luz_cone.energy = clamp((bateria / (max_bateria / 100)) / 100, .5, 1)
+	luz_cone.energy = clamp(bateria / max_bateria, .5, 1)

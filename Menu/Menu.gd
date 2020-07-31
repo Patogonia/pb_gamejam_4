@@ -1,11 +1,12 @@
 extends Control
 
-
 export(AudioStreamOGGVorbis) var musica
 
 
 func _ready():
 	Input.set_custom_mouse_cursor(load("res://cursor_menu.png"))
+	if Musica.stream == musica:
+		return
 	Musica.stream = musica
 	Musica.play()
 
@@ -36,6 +37,6 @@ func _on_TrovaoTimer_timeout():
 	$Background/Trovao/Tween.interpolate_property($Background/Trovao, "energy", strenght, 0, 0.5, Tween.TRANS_LINEAR)
 	$Background/Trovao/Tween.start()
 	$Background/Trovao/TrovaoSom.play(clamp(strenght / 2, 0, 1.25))
-	$Background/Trovao/TrovaoSom.volume_db = (strenght - 1) * 2
+	$Background/Trovao/TrovaoSom.volume_db = ((strenght - 1) * 2) - 7
 	randomize()
 	$Background/Trovao/Timer.start(rand_range(5, 10))

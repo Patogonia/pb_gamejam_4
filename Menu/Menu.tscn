@@ -273,6 +273,7 @@ autostart = true
 
 [node name="TrovaoSom" type="AudioStreamPlayer" parent="Background/Trovao"]
 stream = ExtResource( 14 )
+volume_db = -7.0
 
 [node name="Arvore" type="Sprite" parent="Background"]
 position = Vector2( 690.625, 179.566 )
