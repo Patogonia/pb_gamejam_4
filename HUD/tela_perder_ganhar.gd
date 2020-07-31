@@ -4,11 +4,13 @@ var ganho: bool
 
 func exibir_perder() -> void:
 	ganho = false
+	self.visible = true
 	$AnimationPlayer.play("Perder")
 
 
 func exibir_ganhar() -> void:
 	ganho = true
+	self.visible = true
 	$AnimationPlayer.play("Ganhar")
 
 
