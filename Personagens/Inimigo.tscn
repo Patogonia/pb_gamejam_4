@@ -5,9 +5,9 @@
 [ext_resource path="res://Personagens/inimigo.png" type="Texture" id=3]
 [ext_resource path="res://Personagens/MaquinaDeEstados/MaquinaDeEstados.gd" type="Script" id=4]
 [ext_resource path="res://Personagens/MaquinaDeEstados/pegar_alvo.gd" type="Script" id=5]
-[ext_resource path="res://Personagens/fugir_jogador.gd" type="Script" id=6]
+[ext_resource path="res://Personagens/MaquinaDeEstados/fugir_jogador.gd" type="Script" id=6]
 
-[sub_resource type="CanvasItemMaterial" id=8]
+[sub_resource type="CanvasItemMaterial" id=1]
 resource_local_to_scene = true
 light_mode = 2
 
@@ -55,7 +55,7 @@ dist_min_fugir = 200.0
 
 [node name="Sprite" parent="." index="0"]
 light_mask = 2
-material = SubResource( 8 )
+material = SubResource( 1 )
 scale = Vector2( 1, 1 )
 frames = SubResource( 7 )
 animation = "parado"
@@ -73,13 +73,14 @@ script = ExtResource( 4 )
 [node name="PegarAlvo" type="Node" parent="MaquinaDeEstados" index="0"]
 script = ExtResource( 5 )
 testar_caminho = true
-tempo_atualizar_alvo = 2.0
+tempo_atualizar_alvo = 1.0
 distancia_max = 320.0
 
 [node name="FugirJogador" type="Node" parent="MaquinaDeEstados" index="1"]
 script = ExtResource( 6 )
-tempo_atualizar_direcao = 1.0
+tempo_atualizar_direcao = 0.1
 distancia_fugir = 80.0
+metodo_fuga = 2
 
 [node name="TempoStun" type="Timer" parent="." index="4"]
 [connection signal="ready" from="." to="MaquinaDeEstados" method="iniciar"]

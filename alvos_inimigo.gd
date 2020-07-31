@@ -33,7 +33,7 @@ func pegar_alvo() -> Node2D:
 		var d_a_j: float = Globais.jogador.position.distance_squared_to(pos_alvo)
 		var d_a_i: float = Globais.inimigo.position.distance_squared_to(pos_alvo)
 		
-		pontuacao_alvos[alvo] = 100 / d_a_i - 100 / d_a_j
+		pontuacao_alvos[alvo] = d_a_j - d_a_i
 #		print(alvo.name, " ", pontuacao_alvos[alvo])
 		
 		if not alvo_menor_d_a_j or d_a_j < menor_d_a_j:
