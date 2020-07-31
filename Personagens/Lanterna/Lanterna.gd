@@ -17,6 +17,7 @@ var apagada: bool = false
 func _process(delta: float) -> void:
 	# Player liga ou desliga a lanterna
 	if Input.is_action_just_pressed("ativar_desativar_lanterna"):
+		$SomToggle.play()
 		_set_ligada(!ligada)
 	
 	# Segue o mouse

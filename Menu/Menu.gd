@@ -1,8 +1,13 @@
 extends Control
 
 
+export(AudioStreamOGGVorbis) var musica
+
+
 func _ready():
 	Input.set_custom_mouse_cursor(load("res://cursor_menu.png"))
+	Musica.stream = musica
+	Musica.play()
 
 
 func _process(_delta: float):

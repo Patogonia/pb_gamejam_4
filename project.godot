@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Globais="*res://globais.gd"
+Musica="*res://musica.gd"
 
 [debug]
 

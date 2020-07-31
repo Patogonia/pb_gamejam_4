@@ -111,4 +111,6 @@ playback_process_mode = 0
 [node name="TimerEsconder" type="Timer" parent="Mensagem/Texto" index="1"]
 wait_time = 2.0
 one_shot = true
+
+[node name="SomItem" type="AudioStreamPlayer" parent="." index="7"]
 [connection signal="timeout" from="Mensagem/Texto/TimerEsconder" to="." method="esconder_mensagem"]

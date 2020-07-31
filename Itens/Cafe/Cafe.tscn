@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Itens/Itens.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Itens/Cafe/cafezin.png" type="Texture" id=2]
 [ext_resource path="res://Itens/Cafe/cafe.gd" type="Script" id=3]
+[ext_resource path="res://Sons/cafe.wav" type="AudioStream" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
@@ -48,10 +49,11 @@ animations = [ {
 script = ExtResource( 3 )
 usos = 1
 mensagem_usar = "Caffeine Rush!"
+som_usar = ExtResource( 4 )
 mensagem_ja_tomado = "Wait, or you'll get a heart attack lol"
 multiplicador_de_velocidade = 2.0
 buff_time = 10.0
 
 [node name="Sprite" parent="." index="0"]
 frames = SubResource( 9 )
-frame = 4
+frame = 3
