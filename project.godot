@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 Globais="*res://globais.gd"
 Musica="*res://musica.gd"
+SalvarCarregar="*res://salvar_carregar.gd"
 
 [debug]
 

@@ -7,41 +7,52 @@
 [ext_resource path="res://Menu/Tema.tres" type="Theme" id=5]
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=6]
 
-[sub_resource type="StyleBoxTexture" id=1]
-texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 1024, 1024 )
-margin_left = 10.0
+[sub_resource type="GDScript" id=1]
+script/source = "extends CanvasLayer
+
+
+
+func _ready() -> void:
+	Globais.hud = self
+	Globais.inventario = $Inventario
+	Globais.tela_ganhar_perder = $TelaGanharPerder
+"
 
 [sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 1024, 1024 )
 margin_left = 10.0
-modulate_color = Color( 0.494118, 0.494118, 0.494118, 1 )
 
 [sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 1024, 1024 )
 margin_left = 10.0
-modulate_color = Color( 0, 0, 0, 1 )
+modulate_color = Color( 0.494118, 0.494118, 0.494118, 1 )
 
 [sub_resource type="StyleBoxTexture" id=4]
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 1024, 1024 )
-margin_right = 10.0
+margin_left = 10.0
+modulate_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="StyleBoxTexture" id=5]
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 1024, 1024 )
 margin_right = 10.0
-modulate_color = Color( 0.494118, 0.494118, 0.494118, 1 )
 
 [sub_resource type="StyleBoxTexture" id=6]
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 1024, 1024 )
 margin_right = 10.0
+modulate_color = Color( 0.494118, 0.494118, 0.494118, 1 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 1024, 1024 )
+margin_right = 10.0
 modulate_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 length = 2.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Mensagem:text")
@@ -152,7 +163,7 @@ tracks/8/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 length = 2.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Mensagem:text")
@@ -264,6 +275,7 @@ tracks/8/keys = {
 }
 
 [node name="HUD" type="CanvasLayer"]
+script = SubResource( 1 )
 
 [node name="Inventario" type="HBoxContainer" parent="."]
 anchor_top = 1.0
@@ -354,11 +366,11 @@ __meta__ = {
 margin_right = 163.0
 margin_bottom = 40.0
 size_flags_horizontal = 3
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 1 )
-custom_styles/focus = SubResource( 1 )
-custom_styles/disabled = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 disabled = true
 text = "Restart Level"
 align = 0
@@ -375,17 +387,17 @@ margin_left = 167.0
 margin_right = 330.0
 margin_bottom = 40.0
 size_flags_horizontal = 3
-custom_styles/hover = SubResource( 4 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/focus = SubResource( 4 )
-custom_styles/disabled = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource(5 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
 text = "Main Menu"
 align = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TelaGanharPerder"]
-anims/Ganhar = SubResource( 7 )
-anims/Perder = SubResource( 8 )
+anims/Ganhar = SubResource( 8 )
+anims/Perder = SubResource( 9 )
 
 [node name="Pause" parent="." instance=ExtResource( 6 )]
 
