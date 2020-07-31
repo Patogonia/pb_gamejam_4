@@ -1,4 +1,4 @@
-[gd_scene load_steps=129 format=2]
+[gd_scene load_steps=130 format=2]
 
 [ext_resource path="res://Personagens/Inimigo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://astar.gd" type="Script" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://criador_inimigo.gd" type="Script" id=18]
 [ext_resource path="res://cutscene.gd" type="Script" id=19]
 [ext_resource path="res://box.png" type="Texture" id=20]
+[ext_resource path="res://Sons/levelone_theme.ogg" type="AudioStream" id=21]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 0, 16, 0, 0, 16, 0, 16, 8, 8, 8, 8, 16 )
@@ -827,6 +828,7 @@ animations = [ {
 [node name="CenaTeste" type="CanvasModulate"]
 color = Color( 0.0980392, 0.0980392, 0.0980392, 1 )
 script = ExtResource( 19 )
+musica = ExtResource( 21 )
 
 [node name="Iluminacao" type="Node" parent="."]
 
@@ -985,7 +987,6 @@ position = Vector2( 64, -400 )
 
 [node name="Jogador" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( -3.17025, -421.163 )
-zoom_camera = 0.25
 
 [node name="Inimigo" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 400, 16 )
@@ -1055,6 +1056,6 @@ script = SubResource( 79 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -216, -552 )
 frames = SubResource( 108 )
-frame = 13
+frame = 23
 playing = true
 [connection signal="timeout" from="MapaPathfinding/AtualizarPesos" to="MapaPathfinding" method="_atualizar_pesos"]

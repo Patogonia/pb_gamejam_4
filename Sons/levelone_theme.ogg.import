@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/levelone_theme.ogg-7d4ac3a127c41a4f8a0660c6f5b4a6a6.oggstr"
+
+[deps]
+
+source_file="res://Sons/levelone_theme.ogg"
+dest_files=[ "res://.import/levelone_theme.ogg-7d4ac3a127c41a4f8a0660c6f5b4a6a6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

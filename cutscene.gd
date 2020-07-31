@@ -1,5 +1,11 @@
 extends Node
 
+export(AudioStreamOGGVorbis) var musica 
+
+func _ready() -> void:
+	Musica.stream = musica
+	Musica.play()
+
 
 func ganhar() -> void:
 	_configurar_personagens()

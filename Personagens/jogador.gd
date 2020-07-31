@@ -62,6 +62,11 @@ func mostrar_mensagem(mensagem: String) -> void:
 	_timer_esconder_mens.start()
 
 
+func tocar_som(som: AudioStreamSample) -> void:
+	$SomItem.stream = som
+	$SomItem.play()
+
+
 func esconder_mensagem() -> void:
 	_mensagem_tween.interpolate_property(_mensagem, "modulate", Color.white, Color.transparent, .1)
 	_mensagem_tween.interpolate_property(_mensagem, "scale", Vector2(.6, .6), Vector2(.4, .4), .1)
