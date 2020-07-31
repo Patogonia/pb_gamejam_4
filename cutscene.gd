@@ -10,7 +10,7 @@ func _ready() -> void:
 
 
 func ganhar() -> void:
-	var tempo_percorrido: int = OS.get_unix_time() - tempo_inicial
+	var tempo_percorrido: int = OS.get_unix_time() - tempo_inicial - $SpawnAleatorioInimigo.tempo_spawnar
 	_configurar_personagens()
 	SalvarCarregar.salvar_pontuacao(name, tempo_percorrido)
 	Globais.tela_ganhar_perder.exibir_ganhar(tempo_percorrido)

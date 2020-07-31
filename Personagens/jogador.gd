@@ -18,7 +18,7 @@ func _ready() -> void:
 	$Camera2D.zoom = Vector2(zoom_camera, zoom_camera)
 	Input.set_custom_mouse_cursor(load("res://cursor_ingame.png"))
 	yield(get_tree(), "idle_frame")
-	mostrar_mensagem("Sneaky Boy must not get %d hard drives!" % Globais.inimigo.qnt_alvos)
+	mostrar_mensagem("Sneaky Boy will arrive in %d seconds!" % get_tree().current_scene.get_node("SpawnAleatorioInimigo").tempo_spawnar)
 
 
 func _physics_process(_d: float) -> void:

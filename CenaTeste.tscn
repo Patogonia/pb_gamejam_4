@@ -978,11 +978,6 @@ position = Vector2( 64, -400 )
 [node name="Jogador" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( -3.17025, -421.163 )
 
-[node name="Inimigo" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 400, 16 )
-visualizar_caminho = true
-qnt_alvos = 4
-
 [node name="Props" type="TileMap" parent="YSort"]
 tile_set = SubResource( 76 )
 cell_size = Vector2( 16, 16 )
@@ -993,6 +988,7 @@ tile_data = PoolIntArray( -2228241, 8, 0, -2228240, 8, 0, -2228239, 8, 0, -22937
 
 [node name="SpawnAleatorioInimigo" type="Node" parent="."]
 script = ExtResource( 18 )
+tempo_spawnar = 20.0
 
 [node name="Spawn" type="Position2D" parent="SpawnAleatorioInimigo"]
 position = Vector2( 400, 16 )
@@ -1008,6 +1004,10 @@ position = Vector2( 80, 384 )
 
 [node name="Spawn5" type="Position2D" parent="SpawnAleatorioInimigo"]
 position = Vector2( -352, -152 )
+
+[node name="Inimigo" parent="SpawnAleatorioInimigo" instance=ExtResource( 1 )]
+position = Vector2( 400, 16 )
+qnt_alvos = 4
 
 [node name="Tilemaps" type="Node" parent="."]
 
