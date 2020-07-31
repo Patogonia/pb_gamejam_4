@@ -676,6 +676,7 @@ script = ExtResource( 17 )
 __meta__ = {
 "_editor_description_": ""
 }
+level = 2
 
 [node name="Iluminacao" type="Node" parent="."]
 
@@ -956,7 +957,7 @@ position = Vector2( 51.0257, 688 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1040, 40 )
 frames = SubResource( 69 )
-frame = 2
+frame = 10
 playing = true
 
 [node name="HUD" parent="." instance=ExtResource( 12 )]

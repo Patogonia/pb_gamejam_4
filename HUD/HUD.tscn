@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Inventario/inventario.gd" type="Script" id=1]
 [ext_resource path="res://HUD/tela_perder_ganhar.gd" type="Script" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Menu/ButtonStyleInverted.png" type="Texture" id=4]
 [ext_resource path="res://Menu/Tema.tres" type="Theme" id=5]
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=6]
+[ext_resource path="res://HUD/Botao.png" type="Texture" id=7]
+[ext_resource path="res://Personagens/Lanterna/Lanterna.png" type="Texture" id=8]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends CanvasLayer
@@ -310,6 +312,77 @@ tracks/8/keys = {
 
 [node name="HUD" type="CanvasLayer"]
 script = SubResource( 1 )
+
+[node name="Botao1" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 22.0
+margin_top = -96.0
+margin_right = 52.0
+margin_bottom = -69.0
+theme = ExtResource( 5 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Botao1"]
+show_behind_parent = true
+position = Vector2( 13.539, 15.3853 )
+scale = Vector2( 1.73065, 1.875 )
+texture = ExtResource( 7 )
+
+[node name="Botao2" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 73.0
+margin_top = -96.0
+margin_right = 103.0
+margin_bottom = -69.0
+theme = ExtResource( 5 )
+text = "2"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Botao2"]
+show_behind_parent = true
+position = Vector2( 13.539, 15.3853 )
+scale = Vector2( 1.73065, 1.875 )
+texture = ExtResource( 7 )
+
+[node name="BotaoLanterna" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -93.9999
+margin_top = -60.0
+margin_right = -64.0
+margin_bottom = -33.0
+theme = ExtResource( 5 )
+text = "F"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="BotaoLanterna"]
+show_behind_parent = true
+position = Vector2( 13.539, 15.3853 )
+scale = Vector2( 1.73065, 1.875 )
+texture = ExtResource( 7 )
+
+[node name="Sprite2" type="Sprite" parent="BotaoLanterna"]
+position = Vector2( 62, 12 )
+rotation = -2.35619
+scale = Vector2( 2.9375, 2.875 )
+texture = ExtResource( 8 )
 
 [node name="Inventario" type="HBoxContainer" parent="."]
 anchor_top = 1.0

@@ -323,14 +323,14 @@ __meta__ = {
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 1014.0
-margin_bottom = 494.0
+margin_bottom = 498.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Instrucoes" type="VBoxContainer" parent="Margem/HBoxContainer"]
 margin_right = 500.0
-margin_bottom = 484.0
+margin_bottom = 488.0
 size_flags_horizontal = 3
 
 [node name="HowItWorks" type="Label" parent="Margem/HBoxContainer/Instrucoes"]
@@ -347,7 +347,7 @@ __meta__ = {
 [node name="RichTextLabel" type="Label" parent="Margem/HBoxContainer/Instrucoes"]
 margin_top = 44.0
 margin_right = 500.0
-margin_bottom = 454.0
+margin_bottom = 488.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
 custom_constants/line_spacing = -2
@@ -355,7 +355,7 @@ text = "You are the guard now, no more sneaking around! This time, you are the o
 
 - Sneaky Boy is trying to get all hard drives containing important information about our \"ethically questionable organization\". Your job is to get him before he grabs enough hard drives
 
-- Sneaky Boy has a vest that makes himself invisible, the only way to see him is by using your Special Lantern
+- Sneaky Boy has a vest that makes himself invisible, the only way to see him is by using your Special Lantern, that can be activated or deactivated by clicking F on the keyboard
 
 - The Special Lantern has only 60 seconds of battery duration, and without it you won't be able to stop Sneaky Boy. Always try to recharge it when possible
 
@@ -370,7 +370,7 @@ uppercase = true
 [node name="Itens" type="VBoxContainer" parent="Margem/HBoxContainer"]
 margin_left = 504.0
 margin_right = 1004.0
-margin_bottom = 484.0
+margin_bottom = 488.0
 size_flags_horizontal = 3
 __meta__ = {
 "_edit_use_anchors_": false
@@ -429,7 +429,7 @@ custom_styles/panel = SubResource( 7 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Margem/HBoxContainer/Itens/Cafe/PainelItem"]
 position = Vector2( 32, 32 )
 frames = SubResource( 16 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="Mesa" type="TextureRect" parent="Margem/HBoxContainer/Itens/Cafe"]
@@ -465,7 +465,7 @@ custom_styles/panel = SubResource( 7 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Margem/HBoxContainer/Itens/PowerBank/PainelItem"]
 position = Vector2( 32, 32 )
 frames = SubResource( 30 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="Mesa" type="TextureRect" parent="Margem/HBoxContainer/Itens/PowerBank"]
@@ -501,7 +501,7 @@ custom_styles/panel = SubResource( 7 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Margem/HBoxContainer/Itens/Taser/PainelItem"]
 position = Vector2( 32, 32 )
 frames = SubResource( 48 )
-frame = 14
+frame = 15
 playing = true
 
 [node name="Mesa" type="TextureRect" parent="Margem/HBoxContainer/Itens/Taser"]
@@ -589,6 +589,22 @@ size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "Thermometer table: Gives you a thermometer that, when used, tells you if Sneaky Boy is \"cold or hot\"."
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wasd" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.898
+anchor_right = 0.5
+anchor_bottom = 0.898
+margin_left = -219.0
+margin_top = -20.28
+margin_right = 219.0
+margin_bottom = 19.72
+text = "W A S D  to move"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

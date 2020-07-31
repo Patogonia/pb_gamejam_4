@@ -1,6 +1,7 @@
 extends Node
 
 export(AudioStreamOGGVorbis) var musica 
+export(int) var level
 onready var tempo_inicial: int = OS.get_unix_time()
 
 func _ready() -> void:
