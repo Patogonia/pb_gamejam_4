@@ -1055,6 +1055,6 @@ script = SubResource( 79 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -216, -552 )
 frames = SubResource( 108 )
-frame = 11
+frame = 13
 playing = true
 [connection signal="timeout" from="MapaPathfinding/AtualizarPesos" to="MapaPathfinding" method="_atualizar_pesos"]

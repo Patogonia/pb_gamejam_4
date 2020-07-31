@@ -7,7 +7,7 @@
 [node name="MesaTermometro" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 item_to_instance = "res://Itens/Termometro/Termometro.tscn"
-mensagem_pegar = "Aquired heat detector!"
+mensagem_pegar = "Acquired heat detector!"
 
 [node name="Sprite" parent="." index="0"]
 position = Vector2( -4.76837e-07, 0 )

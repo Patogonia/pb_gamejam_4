@@ -1,13 +1,14 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://MesaRecarregador/mesaRecarregador.gd" type="Script" id=1]
 [ext_resource path="res://MesaRecarregador/mesa.png" type="Texture" id=2]
 [ext_resource path="res://botao_spritesheet.png" type="Texture" id=3]
+[ext_resource path="res://HUD/m5x7.ttf" type="DynamicFontData" id=4]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 16, 16 )
 
 [sub_resource type="AtlasTexture" id=3]
@@ -30,7 +31,7 @@ region = Rect2( 96, 0, 32, 32 )
 atlas = ExtResource( 3 )
 region = Rect2( 128, 0, 32, 32 )
 
-[sub_resource type="SpriteFrames" id=8]
+[sub_resource type="SpriteFrames" id=13]
 animations = [ {
 "frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
 "loop": false,
@@ -38,10 +39,22 @@ animations = [ {
 "speed": 9.0
 } ]
 
+[sub_resource type="DynamicFont" id=9]
+size = 18
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="Theme" id=10]
+default_font = SubResource( 9 )
+
 [node name="MesaRecarregador" type="StaticBody2D"]
 collision_layer = 4
 collision_mask = 7
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -4.76837e-07, -4.76837e-07 )
@@ -49,30 +62,31 @@ scale = Vector2( 0.25, 0.228571 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 11 )
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 2 )
+shape = SubResource( 12 )
 
 [node name="BotaoSprite" type="AnimatedSprite" parent="."]
 visible = false
 position = Vector2( 0, -13.3249 )
 scale = Vector2( 0.432238, 0.426519 )
-frames = SubResource( 8 )
+frames = SubResource( 13 )
+frame = 4
 
 [node name="Label" type="Label" parent="BotaoSprite"]
 anchor_left = 0.281
 anchor_top = 0.281
 anchor_right = 0.719
 anchor_bottom = 0.719
-margin_left = -15.992
-margin_top = -15.992
-margin_right = -16.008
-margin_bottom = -16.008
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+margin_left = -16.992
+margin_top = -16.992
+margin_right = -14.008
+margin_bottom = -15.008
+theme = SubResource( 10 )
 text = "E"
 align = 1
 valign = 1

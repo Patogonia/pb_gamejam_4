@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Menu/ButtonStyle.png" type="Texture" id=1]
 [ext_resource path="res://Personagens/guardinha.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Personagens/inimigo.png" type="Texture" id=13]
 [ext_resource path="res://Sons/trovao.wav" type="AudioStream" id=14]
 [ext_resource path="res://Sons/rain.wav" type="AudioStream" id=15]
+[ext_resource path="res://Menu/Tema.tres" type="Theme" id=16]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -159,6 +160,7 @@ modulate_color = Color( 0, 0, 0, 1 )
 [node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 16 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -237,7 +239,6 @@ use_parent_material = true
 position = Vector2( 481.555, 346.258 )
 scale = Vector2( 6.45419, 6.31536 )
 frames = SubResource( 8 )
-frame = 1
 playing = true
 
 [node name="Light2D" type="Light2D" parent="Background/Jogador"]
@@ -321,10 +322,6 @@ custom_styles/pressed = SubResource( 12 )
 custom_styles/focus = SubResource( 12 )
 custom_styles/disabled = SubResource( 13 )
 custom_styles/normal = SubResource( 14 )
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 enabled_focus_mode = 0
 text = "PLAY"
 align = 0
@@ -348,9 +345,6 @@ custom_styles/pressed = SubResource( 12 )
 custom_styles/focus = SubResource( 12 )
 custom_styles/disabled = SubResource( 13 )
 custom_styles/normal = SubResource( 14 )
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 enabled_focus_mode = 0
 text = "OPTIONS"
 align = 0
@@ -375,9 +369,6 @@ custom_styles/pressed = SubResource( 12 )
 custom_styles/focus = SubResource( 12 )
 custom_styles/disabled = SubResource( 13 )
 custom_styles/normal = SubResource( 14 )
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 enabled_focus_mode = 0
 text = "CREDITS"
 align = 0
@@ -402,9 +393,6 @@ custom_styles/pressed = SubResource( 12 )
 custom_styles/focus = SubResource( 12 )
 custom_styles/disabled = SubResource( 13 )
 custom_styles/normal = SubResource( 14 )
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 enabled_focus_mode = 0
 text = "EXIT"
 align = 0
@@ -414,14 +402,14 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-anchor_left = 0.778
-anchor_top = 0.923
-anchor_right = 0.957
-anchor_bottom = 0.946
-margin_left = -0.163391
-margin_top = -0.052002
-margin_right = -0.459351
-margin_bottom = 0.14801
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -280.0
+margin_top = -56.0
+margin_right = -46.0
+margin_bottom = -37.0
 text = "Made for the PB Game Jam 4"
 __meta__ = {
 "_edit_use_anchors_": false

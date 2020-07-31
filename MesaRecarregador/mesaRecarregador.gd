@@ -31,9 +31,9 @@ func _on_Area2D_body_exited(_body) -> void:
 # Mudar a posição do label pra ele seguir a animação do botao
 func _on_BotaoSprite_frame_changed():
 	if $BotaoSprite.frame == 0:
-		$BotaoSprite/Label.rect_position.y = -7
+		$BotaoSprite/Label.valign = VALIGN_CENTER
 	elif $BotaoSprite.frame == 4:
-		$BotaoSprite/Label.rect_position.y = -7
+		$BotaoSprite/Label.valign = VALIGN_CENTER
 		$BotaoSprite.stop()
 	else:
-		$BotaoSprite/Label.rect_position.y = -5
+		$BotaoSprite/Label.valign = VALIGN_BOTTOM
