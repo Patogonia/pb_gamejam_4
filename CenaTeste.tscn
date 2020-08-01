@@ -1046,6 +1046,6 @@ position = Vector2( 368, -360 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -216, -552 )
 frames = SubResource( 107 )
-frame = 3
+frame = 12
 playing = true
 [connection signal="timeout" from="MapaPathfinding/AtualizarPesos" to="MapaPathfinding" method="_atualizar_pesos"]

@@ -15,13 +15,17 @@ func exibir_ganhar(tempo: int) -> void:
 	self.visible = true
 	$Tempo.text = _TEMPLATE_TEXTO_TEMPO.format({"t": Globais.formatar_tempo(tempo)})
 	$AnimationPlayer.play("Ganhar")
+	yield($AnimationPlayer, "animation_finished")
 	if Globais.hud.get_parent().level == 2:
-		$HBoxContainer/Botao1.visible = false
+		$HBoxContainer/Botao1.text = "Credits"
 
 
 func _ao_clicar_botao_1() -> void:
-	if Globais.hud.get_parent().level == 1 and ganho:
-		assert(get_tree().change_scene("res://Level2.tscn") == OK)
+	if ganho:
+		if Globais.hud.get_parent().level == 1:
+			assert(get_tree().change_scene("res://Level2.tscn") == OK)
+		else:
+			assert(get_tree().change_scene("res://Menu/Creditos.tscn") == OK)
 	else:
 		assert(get_tree().reload_current_scene() == OK)
 
