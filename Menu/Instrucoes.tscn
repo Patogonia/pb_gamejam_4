@@ -429,7 +429,7 @@ custom_styles/panel = SubResource( 7 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Margem/HBoxContainer/Itens/Cafe/PainelItem"]
 position = Vector2( 32, 32 )
 frames = SubResource( 16 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="Mesa" type="TextureRect" parent="Margem/HBoxContainer/Itens/Cafe"]
@@ -465,7 +465,7 @@ custom_styles/panel = SubResource( 7 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Margem/HBoxContainer/Itens/PowerBank/PainelItem"]
 position = Vector2( 32, 32 )
 frames = SubResource( 30 )
-frame = 5
+frame = 12
 playing = true
 
 [node name="Mesa" type="TextureRect" parent="Margem/HBoxContainer/Itens/PowerBank"]
@@ -501,7 +501,7 @@ custom_styles/panel = SubResource( 7 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Margem/HBoxContainer/Itens/Taser/PainelItem"]
 position = Vector2( 32, 32 )
 frames = SubResource( 48 )
-frame = 15
+frame = 1
 playing = true
 
 [node name="Mesa" type="TextureRect" parent="Margem/HBoxContainer/Itens/Taser"]
