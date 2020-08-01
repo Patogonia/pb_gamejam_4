@@ -159,14 +159,14 @@ region_rect = Rect2( 0, 0, 1024, 1024 )
 margin_left = 40.0
 modulate_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="DynamicFont" id=17]
+[sub_resource type="DynamicFont" id=15]
 size = 64
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 18 )
 
 [sub_resource type="Theme" id=16]
-default_font = SubResource( 17 )
+default_font = SubResource( 15 )
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -321,14 +321,14 @@ autoplay = true
 
 [node name="PlayButton" type="Button" parent="."]
 light_mask = 2
-anchor_left = 0.062
-anchor_top = 0.333
-anchor_right = 0.276
-anchor_bottom = 0.42
-margin_left = 0.511997
-margin_top = 0.200012
-margin_right = 0.375977
-margin_bottom = -1.52588e-05
+anchor_left = 0.175
+anchor_top = 0.385
+anchor_right = 0.175
+anchor_bottom = 0.385
+margin_left = -115.2
+margin_top = -31.0
+margin_right = 114.8
+margin_bottom = 31.0
 focus_mode = 0
 custom_styles/hover = SubResource( 12 )
 custom_styles/pressed = SubResource( 12 )
@@ -342,40 +342,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OptionsButton" type="Button" parent="."]
-light_mask = 2
-anchor_left = 0.062
-anchor_top = 0.483
-anchor_right = 0.276
-anchor_bottom = 0.57
-margin_left = 0.511997
-margin_top = 0.199982
-margin_right = 0.375977
-margin_bottom = -3.05176e-05
-focus_mode = 0
-custom_styles/hover = SubResource( 12 )
-custom_styles/pressed = SubResource( 12 )
-custom_styles/focus = SubResource( 12 )
-custom_styles/disabled = SubResource( 13 )
-custom_styles/normal = SubResource( 14 )
-enabled_focus_mode = 0
-text = "OPTIONS"
-align = 0
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
-
 [node name="CreditsButton" type="Button" parent="."]
 light_mask = 2
-anchor_left = 0.062
-anchor_top = 0.633
-anchor_right = 0.276
-anchor_bottom = 0.72
-margin_left = 0.511997
-margin_top = 0.200012
-margin_right = 0.375977
-margin_bottom = -3.05176e-05
+anchor_left = 0.175
+anchor_top = 0.55
+anchor_right = 0.175
+anchor_bottom = 0.55
+margin_left = -115.2
+margin_top = -30.0
+margin_right = 114.8
+margin_bottom = 30.0
 focus_mode = 0
 custom_styles/hover = SubResource( 12 )
 custom_styles/pressed = SubResource( 12 )
@@ -392,14 +368,14 @@ __meta__ = {
 
 [node name="ExitButton" type="Button" parent="."]
 light_mask = 2
-anchor_left = 0.062
-anchor_top = 0.817
-anchor_right = 0.276
-anchor_bottom = 0.903
-margin_left = 0.511997
-margin_top = -0.200012
-margin_right = 0.375977
-margin_bottom = 0.199951
+anchor_left = 0.169
+anchor_top = 0.86
+anchor_right = 0.169
+anchor_bottom = 0.86
+margin_left = -109.056
+margin_top = -26.0
+margin_right = 109.944
+margin_bottom = 25.9999
 focus_mode = 0
 custom_styles/hover = SubResource( 12 )
 custom_styles/pressed = SubResource( 12 )
@@ -438,6 +414,5 @@ text = "2 SNEAKY 4 U ?"
 valign = 1
 [connection signal="timeout" from="Background/Trovao/Timer" to="." method="_on_TrovaoTimer_timeout"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
-[connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]

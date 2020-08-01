@@ -20,10 +20,6 @@ func _on_PlayButton_pressed():
 	assert(get_tree().change_scene("res://Menu/Instrucoes.tscn") == OK)
 
 
-func _on_OptionsButton_pressed():
-	assert(get_tree().change_scene("res://Menu/Opcoes.tscn") == OK)
-
-
 func _on_CreditsButton_pressed():
 	assert(get_tree().change_scene("res://Menu/Creditos.tscn") == OK)
 

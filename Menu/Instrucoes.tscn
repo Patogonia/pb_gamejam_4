@@ -16,39 +16,6 @@
 [ext_resource path="res://Itens/Termometro/termometrto.png" type="Texture" id=14]
 [ext_resource path="res://Menu/Tema.tres" type="Theme" id=15]
 
-[sub_resource type="StyleBoxTexture" id=1]
-texture = ExtResource( 1 )
-region_rect = Rect2( 0, 0, 1024, 1024 )
-margin_left = 40.0
-
-[sub_resource type="StyleBoxTexture" id=2]
-texture = ExtResource( 1 )
-region_rect = Rect2( 0, 0, 1024, 1024 )
-margin_left = 40.0
-modulate_color = Color( 0.494118, 0.494118, 0.494118, 1 )
-
-[sub_resource type="StyleBoxTexture" id=3]
-texture = ExtResource( 1 )
-region_rect = Rect2( 0, 0, 1024, 1024 )
-margin_left = 40.0
-modulate_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="StyleBoxTexture" id=4]
-texture = ExtResource( 2 )
-region_rect = Rect2( 0, 0, 1024, 1024 )
-margin_right = 40.0
-
-[sub_resource type="StyleBoxTexture" id=5]
-texture = ExtResource( 2 )
-region_rect = Rect2( 0, 0, 1024, 1024 )
-margin_right = 40.0
-
-[sub_resource type="StyleBoxTexture" id=6]
-texture = ExtResource( 2 )
-region_rect = Rect2( 0, 0, 1024, 1024 )
-margin_right = 40.0
-modulate_color = Color( 0, 0, 0, 1 )
-
 [sub_resource type="StyleBoxEmpty" id=7]
 
 [sub_resource type="AtlasTexture" id=8]
@@ -243,6 +210,39 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 1024, 1024 )
+margin_left = 40.0
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 1024, 1024 )
+margin_left = 40.0
+modulate_color = Color( 0.494118, 0.494118, 0.494118, 1 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 1024, 1024 )
+margin_left = 40.0
+modulate_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 1024, 1024 )
+margin_right = 40.0
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 1024, 1024 )
+margin_right = 40.0
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 1024, 1024 )
+margin_right = 40.0
+modulate_color = Color( 0, 0, 0, 1 )
+
 [node name="Instrucoes" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -256,52 +256,6 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.109804, 0.109804, 0.109804, 1 )
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
-
-[node name="MenuButton" type="Button" parent="."]
-light_mask = 2
-anchor_left = 0.036
-anchor_top = 0.852
-anchor_right = 0.25
-anchor_bottom = 0.938
-margin_left = 0.162544
-margin_top = -0.212128
-margin_right = 0.0265198
-margin_bottom = 0.187866
-focus_mode = 0
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 1 )
-custom_styles/focus = SubResource( 1 )
-custom_styles/disabled = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
-enabled_focus_mode = 0
-text = "MAIN MENU"
-align = 0
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
-
-[node name="NextButton" type="Button" parent="."]
-light_mask = 2
-anchor_left = 0.75
-anchor_top = 0.852
-anchor_right = 0.964
-anchor_bottom = 0.938
-margin_top = -0.212006
-margin_right = -0.136047
-margin_bottom = 0.188049
-focus_mode = 0
-custom_styles/hover = SubResource( 4 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/disabled = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
-enabled_focus_mode = 0
-text = "NEXT"
-align = 2
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
@@ -429,7 +383,7 @@ custom_styles/panel = SubResource( 7 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Margem/HBoxContainer/Itens/Cafe/PainelItem"]
 position = Vector2( 32, 32 )
 frames = SubResource( 16 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="Mesa" type="TextureRect" parent="Margem/HBoxContainer/Itens/Cafe"]
@@ -465,7 +419,7 @@ custom_styles/panel = SubResource( 7 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Margem/HBoxContainer/Itens/PowerBank/PainelItem"]
 position = Vector2( 32, 32 )
 frames = SubResource( 30 )
-frame = 12
+frame = 9
 playing = true
 
 [node name="Mesa" type="TextureRect" parent="Margem/HBoxContainer/Itens/PowerBank"]
@@ -501,7 +455,7 @@ custom_styles/panel = SubResource( 7 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Margem/HBoxContainer/Itens/Taser/PainelItem"]
 position = Vector2( 32, 32 )
 frames = SubResource( 48 )
-frame = 1
+frame = 14
 playing = true
 
 [node name="Mesa" type="TextureRect" parent="Margem/HBoxContainer/Itens/Taser"]
@@ -607,6 +561,53 @@ align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
+}
+
+[node name="MenuButton" type="Button" parent="."]
+light_mask = 2
+anchor_left = 0.143
+anchor_top = 0.895
+anchor_right = 0.143
+anchor_bottom = 0.895
+margin_left = -109.405
+margin_top = -26.0121
+margin_right = 109.595
+margin_bottom = 25.9879
+focus_mode = 0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+enabled_focus_mode = 0
+text = "MAIN MENU"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="NextButton" type="Button" parent="."]
+light_mask = 2
+anchor_left = 0.857
+anchor_top = 0.895
+anchor_right = 0.857
+anchor_bottom = 0.895
+margin_left = -109.568
+margin_top = -26.012
+margin_right = 109.432
+margin_bottom = 25.988
+focus_mode = 0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+enabled_focus_mode = 0
+text = "NEXT"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
 }
 [connection signal="pressed" from="MenuButton" to="." method="_on_MenuButton_pressed"]
 [connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
